@@ -43,37 +43,35 @@
             <section class="col-4 col-12-narrower">
                 <div class="box highlight">
                     <i class="icon solid major fa-paper-plane"></i>
-                    <h3>Bezkonkurencyjne ceny</h3>
-                    <p>######</p>
+                    <h3>BRAK LIMITU KILOMETRÓW</h3>
                 </div>
             </section>
             <section class="col-4 col-12-narrower">
                 <div class="box highlight">
                     <i class="icon solid major fa-pencil-alt"></i>
-                    <h3>Also Important</h3>
-                    <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                    <h3>NAJTAŃSZY WYNAJEM W KRAJU</h3>  
                 </div>
             </section>
             <section class="col-4 col-12-narrower">
                 <div class="box highlight">
                     <i class="icon solid major fa-wrench"></i>
-                    <h3>Probably Important</h3>
-                    <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                    <h3>OFERUJEMY TYLKO NAJSZYBSZE SAMOCHODY</h3>
                 </div>
             </section>
         </div>
     </div>
 </section>
 
-<!-- Gigantic Heading 
 <section class="wrapper style2">
     <div class="container">
         <header class="major">
-            <h2>A gigantic heading you can use for whatever</h2>
-            <p>With a much smaller subtitle hanging out just below it</p>
+            <h2>Wypożyczalnia samochodów RacingCars to świetny wybór</h2>
+            <p>Przekonaj się sam!</p>
         </header>
+        
     </div>
-</section> -->
+</section> 
+
 
 <!-- Posts -->
 <section class="wrapper style1">
@@ -120,5 +118,14 @@
         </div>
     </div>
 </section>
+
+<section id="cta" class="wrapper style3">
+					<div class="container">
+						<header>
+							<h2>Oferujemy rezerwacje samochodu online!</h2>
+							<a href="#" class="button">Sprawdź</a>
+						</header>
+					</div>
+				</section>
 
 {/block}

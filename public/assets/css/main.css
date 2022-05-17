@@ -1,6 +1,7 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
+
 /*
 	Arcana by HTML5 UP
 	html5up.net | @ajlkn
@@ -1959,7 +1960,7 @@ input, select, textarea {
 	}
 
 	header p {
-		color: #999;
+		color: rgb(236, 9, 9);
 		font-size: 1.25em;
 		position: relative;
 		margin-top: -1.25em;
@@ -1981,9 +1982,9 @@ input, select, textarea {
 			padding: 1em 0 0 0;
 			margin: 0;
 			top: -1em;
-			font-size: 1.5em;
+			font-size: 1.8em;
 			letter-spacing: -0.025em;
-			text-align: right;
+			text-align: center;
 		}
 
 	footer {

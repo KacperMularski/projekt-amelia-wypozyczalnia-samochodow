@@ -41,28 +41,33 @@
 
                                     <a href ="#"><div class="imgBorder">
                                         <img src="images/bmw_330i_m_sport.png" alt="" />
-                                        <h1>BMW 330i M SPORT</h1>
+                                        
                                         <ul>
-                                        <li>Silnik: 4500cm<sup>3</sup> </li>
-                                        <li>Paliwo: Benzyna </li>
-                                        <li>Skrzynia: automatyczna </li>
-                                        <li>Liczba miejsc: 5 </li>
+                                            <h1>BMW 330i M SPORT</h1>
+                                            <li><i class="fa-solid fa-rocket"></i> 4500cm<sup>3</sup> </li>
+                                            <li><i class="fa-solid fa-gas-pump"></i>  Benzyna </li>
+                                            <li><i class="fa-solid fa-gears"></i>  Automatyczna </li>
+                                            <li><i class="fa-solid fa-people-group"></i> Pięć miejsc </li>
+                                            <h2> Cena za dobę: 1200zł </h2>
                                         </ul>
-                                        <h2> Cena za dobę: 1200zł </h2>
+                                        
                                     </div></a>
 
                                     </br>
 
                                     <a href ="#"><div class="imgBorder">
                                         <img src="images/mustang.png" alt="" />
-                                        <h1>FORD Mustang</h1>
+                                        
                                         <ul>
-                                        <li>Silnik: 5000cm<sup>3</sup> </li>
-                                        <li>Paliwo: Benzyna </li>
-                                        <li>Skrzynia: manualna </li>
-                                        <li>Liczba miejsc: 4 </li>
-                                        </ul>
+                                        <h1>FORD Mustang</h1>
+                                        <li><i class="fa-solid fa-rocket"></i> 5000cm<sup>3</sup> </li>
+                                        <li><i class="fa-solid fa-gas-pump"></i> Benzyna </li>
+                                        <li><i class="fa-solid fa-gears"></i> Manualna </li>
+                                        <li><i class="fa-solid fa-people-group"></i> Cztery miejsca </li>
                                         <h2> Cena za dobę: 1000zł </h2>
+
+                                        </ul>
+                                        
                                     </div></a>
                                     
                                     

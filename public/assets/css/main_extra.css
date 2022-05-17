@@ -22,11 +22,19 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    height: 280px;
+    min-height: 300px;
+    max-height: 480px;
+    min-width: 580px;
+
+    margin-top: 0px;
+    margin-bottom: -10px;
+    margin-right: 0px;
+    margin-left: 0px;
+    
+   
+   
+    
 }   
-.imgBorder img {
-    float: left
-}
 
 /*.table td {
     border: 1px solid black;
@@ -34,22 +42,17 @@
 }*/
 
 
-.imgText {
-    float: left;
-    
-}
 .imgBorder h1, h2 {
     font-size: 30px;
     
     
-    
-    
+        
 }
 .imgBorder li {
 
     text-align: center;
-    font-size: 20px;
-    list-style: square; 
+    font-size: 25px;
+    list-style: none; 
 }
 .imgBorder ul {
 
@@ -58,6 +61,7 @@
     
     
 }
+
 a {
     color: black;
     text-decoration: none;
@@ -78,5 +82,7 @@ a:visited {
 a:active {
   text-decoration: underline;
 }
+
+
 
 

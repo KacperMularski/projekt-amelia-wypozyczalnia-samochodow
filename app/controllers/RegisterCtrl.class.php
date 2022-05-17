@@ -141,12 +141,12 @@ class RegisterCtrl {
             try {
                 //Dane internetowe
                 App::getDB() -> insert("konto", ["login" => $this->form->login , "email" => $this->form->email  , "haslo" => $this->form->pass]);
-                App::getDB() -> insert("klient", ["imie" => $this->form->imie, "nazwisko" => $this->form->nazwisko, "data_ur" => $this->form->data_ur,
+                App::getDB() -> insert("osoba", ["imie" => $this->form->imie, "nazwisko" => $this->form->nazwisko, "data_ur" => $this->form->data_ur,
                 "nr_pr_jazdy" => $this->form->nr_prawa_jazdy, "nr_tel" => $this->form->nr_tel]);
             
                 $account_id = (int)App::getDB()->id();
                 App::getDB() -> update("konto", ["klient_id_klienta" => $account_id],["id_konta" => $account_id]);
-                App::getDB() -> update("klient", ["konto_id_konta" => $account_id],["id_klienta" => $account_id]);
+                App::getDB() -> update("osoba", ["konto_id_konta" => $account_id],["id_osoby" => $account_id]);
             
                         
                 } catch (\PDOException $ex) {
