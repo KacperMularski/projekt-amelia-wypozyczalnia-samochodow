@@ -43,19 +43,21 @@ class StartCtrl {
         
     }
 
-    public function action_contact_page() {
-
-        App::getSmarty()->assign('page_title','RacingCars');      
-        App::getSmarty()->display("ContactView.tpl");
-
-    }
-
     public function action_offer_page() {
 
         App::getSmarty()->assign('page_title','RacingCars');      
         App::getSmarty()->display("OfferView.tpl");
 
     }
+
+    public function action_rent_page() {
+
+        App::getSmarty()->assign('page_title','RacingCars');      
+        App::getSmarty()->display("RentView.tpl");
+
+    }
+
+
 
 
 

@@ -6,15 +6,10 @@
 
 
     <li><a href="{$conf->action_url}">Strona główna</a></li>
-    <li><a href="right-sidebar.html">Wypożycz</a></li>
+    <li><a href="{$conf->action_url}rent_page">Wypożycz</a></li>
     <li><a href="{$conf->action_url}offer_page">Oferta</a></li>
     <li><a href="#">Rejestracja</a></li>
-    <li><a href="{$conf->action_url}contact_page">Kontakt</a></li>
     
-    
-
-
-
 {/block}
 
 {block name=content}
@@ -65,7 +60,7 @@
                                             <tr class="pure-table-odd"><td><h3>Nazwisko:</h3></td><td> <b>{$form->nazwisko}</b></td></tr>
                                             <tr><td><h3>Data urodzenia:</h3></td><td>  <b>{$form->data_ur}</b></td></tr>
                                             <tr class="pure-table-odd"><td><h3>Numer prawa jazdy:</h3></td><td>  <b>{$form->nr_pr_jazdy}</b></td></tr>
-                                            <tr><td><h3>Numer telefonu:</h3></td><td><b>{$form->nr_tel}</b></td></tr>
+                                            <tr><td><h3>Numer telefonu:</h3></td><td><b>+{$form->nr_tel}</b></td></tr>
                                        </tbody>
 
                                     </table>

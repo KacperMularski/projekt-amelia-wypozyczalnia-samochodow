@@ -6,7 +6,7 @@
 
 
     <li class="current"><a href="{$conf->action_url}">Strona główna</a></li>
-    <li><a href="right-sidebar.html">Wypożycz</a></li>
+    <li><a href="{$conf->action_url}rent_page">Wypożycz</a></li>
     <li><a href="{$conf->action_url}offer_page">Oferta</a></li>
     <li>
         <a href="#">Rejestracja</a>
@@ -19,11 +19,6 @@
         </ul>
     </li>
     
-    <li><a href="{$conf->action_url}contact_page">Kontakt</a></li>
- 
-    
-
-
 {/block}
 
 {block name=content}
@@ -123,7 +118,7 @@
 					<div class="container">
 						<header>
 							<h2>Oferujemy rezerwacje samochodu online!</h2>
-							<a href="#" class="button">Sprawdź</a>
+							<a href="{$conf->action_url}rent_page" class="button">Sprawdź</a>
 						</header>
 					</div>
 				</section>

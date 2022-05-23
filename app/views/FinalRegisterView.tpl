@@ -6,14 +6,9 @@
 
 
     <li><a href="{$conf->action_url}">Strona główna</a></li>
-    <li><a href="right-sidebar.html">Wypożycz</a></li>
+    <li><a href="{$conf->action_url}rent_page">Wypożycz</a></li>
     <li><a href="{$conf->action_url}offer_page">Oferta</a></li>
     <li class="current"><a href="#">Rejestracja</a></li>
-    <li><a href="left-sidebar.html">Kontakt</a></li>
-    
-    
-
-
 
 {/block}
 

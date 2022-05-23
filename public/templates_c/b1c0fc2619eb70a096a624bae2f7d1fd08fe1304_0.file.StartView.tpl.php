@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-16 19:53:03
+/* Smarty version 4.1.0, created on 2022-05-23 13:48:47
   from 'C:\xampp\htdocs\amelia\app\views\StartView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62828f7f2fc220_06352800',
+  'unifunc' => 'content_628b749fdc5519_11013295',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1c0fc2619eb70a096a624bae2f7d1fd08fe1304' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\StartView.tpl',
-      1 => 1652723564,
+      1 => 1653306526,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62828f7f2fc220_06352800 (Smarty_Internal_Template $_smarty_tpl) {
+function content_628b749fdc5519_11013295 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_210461125162828f7f2f42d3_34823765', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2103369121628b749fdbc925_52212145', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_91496655462828f7f2f4c48_75311019', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1889140720628b749fdbd2e2_73950463', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_4837949562828f7f2fbc43_76292073', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_328751060628b749fdc48f4_23703276', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_210461125162828f7f2f42d3_34823765 extends Smarty_Internal_Block
+class Block_2103369121628b749fdbc925_52212145 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_210461125162828f7f2f42d3_34823765',
+    0 => 'Block_2103369121628b749fdbc925_52212145',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_91496655462828f7f2f4c48_75311019 extends Smarty_Internal_Block
+class Block_1889140720628b749fdbd2e2_73950463 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_91496655462828f7f2f4c48_75311019',
+    0 => 'Block_1889140720628b749fdbd2e2_73950463',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -71,7 +71,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
     <li class="current"><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 ">Strona główna</a></li>
-    <li><a href="right-sidebar.html">Wypożycz</a></li>
+    <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+rent_page">Wypożycz</a></li>
     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 offer_page">Oferta</a></li>
     <li>
@@ -87,23 +88,17 @@ register_page">Zarejestruj</a></li>
         </ul>
     </li>
     
-    <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-contact_page">Kontakt</a></li>
- 
-    
-
-
 <?php
 }
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_4837949562828f7f2fbc43_76292073 extends Smarty_Internal_Block
+class Block_328751060628b749fdc48f4_23703276 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_4837949562828f7f2fbc43_76292073',
+    0 => 'Block_328751060628b749fdc48f4_23703276',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -205,7 +200,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 					<div class="container">
 						<header>
 							<h2>Oferujemy rezerwacje samochodu online!</h2>
-							<a href="#" class="button">Sprawdź</a>
+							<a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+rent_page" class="button">Sprawdź</a>
 						</header>
 					</div>
 				</section>

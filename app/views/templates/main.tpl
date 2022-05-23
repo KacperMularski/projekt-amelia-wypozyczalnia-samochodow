@@ -70,7 +70,7 @@
 								<h5>Racing Cars Polska Sp. z o.o.</h5>
 								<p>41-300 Dąbrowa Górnicza </br>
 								ul. Sokolska 52 </br></br>
-								<b><a href="mailto: kontakt@racingcars.pl">kontakt@racingcars.pl</a></b></p>
+								<b><i class="fa-solid fa-square-envelope"></i> <a href="mailto: kontakt@racingcars.pl">kontakt@racingcars.pl</a></b></p>
 								<h5> Rezerwacje telefonicznie </h5>
 								<p><i class="fa-solid fa-square-phone"></i>   675 875 674</p>
 		

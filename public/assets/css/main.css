@@ -2004,6 +2004,7 @@ input, select, textarea {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	
 	textarea {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -2037,13 +2038,13 @@ input, select, textarea {
 		line-height: 1em;
 	}
 
-	label {
+	/*label {
 		display: block;
 		color: inherit;
 		font-weight: 600;
 		line-height: 1.75em;
 		margin-bottom: 0.5em;
-	}
+	}*/
 
 	::-webkit-input-placeholder {
 		color: #999;

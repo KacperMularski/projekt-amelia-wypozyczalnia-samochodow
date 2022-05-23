@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-17 12:58:44
+/* Smarty version 4.1.0, created on 2022-05-23 14:05:41
   from 'C:\xampp\htdocs\amelia\app\views\templates\main.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62837fe458dde9_66873264',
+  'unifunc' => 'content_628b78951ed251_99926224',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '756505db9e99c2294aeecdde781de1896741adbd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\templates\\main.tpl',
-      1 => 1652785120,
+      1 => 1653307540,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62837fe458dde9_66873264 (Smarty_Internal_Template $_smarty_tpl) {
+function content_628b78951ed251_99926224 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -59,7 +59,7 @@ $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 
 					<ul>
                         <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_100789244162837fe45821d8_19368216', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_369107843628b78951e1088_41393219', 'menu');
 ?>
 
 
@@ -96,7 +96,7 @@ personEdit">Użytkownik: Administrator</u></a></b>
                 </div>
 
                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_28737502462837fe458aaa7_97344279', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1381891176628b78951e9e83_75580309', 'content');
 ?>
 
 
@@ -109,7 +109,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_28737502462837fe45
 								<h5>Racing Cars Polska Sp. z o.o.</h5>
 								<p>41-300 Dąbrowa Górnicza </br>
 								ul. Sokolska 52 </br></br>
-								<b><a href="mailto: kontakt@racingcars.pl">kontakt@racingcars.pl</a></b></p>
+								<b><i class="fa-solid fa-square-envelope"></i> <a href="mailto: kontakt@racingcars.pl">kontakt@racingcars.pl</a></b></p>
 								<h5> Rezerwacje telefonicznie </h5>
 								<p><i class="fa-solid fa-square-phone"></i>   675 875 674</p>
 		
@@ -166,7 +166,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_28737502462837fe45
                 <div class="copyright">
 							<ul class="menu">
 								<li>&copy; <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_151319403062837fe458b225_76892194', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2032743822628b78951ea678_76889012', 'end');
 ?>
 </li><li>Designed by: KM</li>
 							</ul>
@@ -212,12 +212,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_151319403062837fe4
 	</body>
 </html><?php }
 /* {block 'menu'} */
-class Block_100789244162837fe45821d8_19368216 extends Smarty_Internal_Block
+class Block_369107843628b78951e1088_41393219 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_100789244162837fe45821d8_19368216',
+    0 => 'Block_369107843628b78951e1088_41393219',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -227,12 +227,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_28737502462837fe458aaa7_97344279 extends Smarty_Internal_Block
+class Block_1381891176628b78951e9e83_75580309 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_28737502462837fe458aaa7_97344279',
+    0 => 'Block_1381891176628b78951e9e83_75580309',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -242,12 +242,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'content'} */
 /* {block 'end'} */
-class Block_151319403062837fe458b225_76892194 extends Smarty_Internal_Block
+class Block_2032743822628b78951ea678_76889012 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_151319403062837fe458b225_76892194',
+    0 => 'Block_2032743822628b78951ea678_76889012',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
