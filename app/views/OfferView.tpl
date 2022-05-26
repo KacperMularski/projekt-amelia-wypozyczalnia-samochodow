@@ -32,38 +32,34 @@
 								<article>
 									<header>
 										<h2>Samochody z naszej oferty</h2>
+
+                                        {if isset($vehicle)}   
+											<h2>Liczba wyników: {$vehicles_count} </h2>
+                                        {/if}
+
 									</header>
 
-                                    <a href ="#"><div class="imgBorder">
-                                        <img src="images/bmw_330i_m_sport.png" alt="" />
+                                    {if isset($vehicle)}    
+                                        {foreach $vehicle as $value}
+
+                                        <a href =""><div class="imgBorder">
+                                        <img src="car_image/{$value["img"]}" alt="" />
                                         
                                         <ul>
-                                            <h1>BMW 330i M SPORT</h1>
-                                            <li><i class="fa-solid fa-rocket"></i> 4500cm<sup>3</sup> </li>
-                                            <li><i class="fa-solid fa-gas-pump"></i>  Benzyna </li>
-                                            <li><i class="fa-solid fa-gears"></i>  Automatyczna </li>
-                                            <li><i class="fa-solid fa-people-group"></i> Pięć miejsc </li>
-                                            <h2> Cena za dobę: 1200zł </h2>
-                                        </ul>
-                                        
-                                    </div></a>
-
-                                    </br>
-
-                                    <a href ="#"><div class="imgBorder">
-                                        <img src="images/mustang.png" alt="" />
-                                        
-                                        <ul>
-                                        <h1>FORD Mustang</h1>
-                                        <li><i class="fa-solid fa-rocket"></i> 5000cm<sup>3</sup> </li>
-                                        <li><i class="fa-solid fa-gas-pump"></i> Benzyna </li>
-                                        <li><i class="fa-solid fa-gears"></i> Manualna </li>
-                                        <li><i class="fa-solid fa-people-group"></i> Cztery miejsca </li>
-                                        <h2> Cena za dobę: 1000zł </h2>
+                                        <h1>{$value["marka"]} {$value["model"]}</h1>
+                                        <li><i class="fa-solid fa-rocket"></i> {$value["poj_silnika"]}cm<sup>3</sup> </li>
+                                        <li><i class="fa-solid fa-gas-pump"></i> {$value["rodz_paliwa"]} </li>
+                                        <li><i class="fa-solid fa-gears"></i> {$value["skrzynia"]} </li>
+                                        <li><i class="fa-solid fa-people-group"></i> Miejsca: {$value["liczba_miejsc"]} </li>
+                                        <h2> Cena za dobę: {$value["cena_doba"]}zł </h2>
 
                                         </ul>
                                         
-                                    </div></a>
+                                        </div></a>
+                                        <br>
+                    
+                                        {/foreach}
+                                    {/if}
                                     
                                     
                                    

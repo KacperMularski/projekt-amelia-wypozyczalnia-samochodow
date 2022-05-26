@@ -17,7 +17,7 @@ Utils::addRoute('register', 'RegisterCtrl');
 
 Utils::addRoute('login_page', 'StartCtrl');
 
-Utils::addRoute('offer_page', 'StartCtrl');
+Utils::addRoute('offer_page', 'OfferCtrl');
 
 Utils::addRoute('login', 'LoginCtrl');
 
@@ -38,6 +38,8 @@ Utils::addRoute('passwordChange', 'PasswordChangeCtrl', ["user","admin"]);
 Utils::addRoute('savePasswordChange', 'PasswordChangeCtrl', ["user","admin"]);
 
 Utils::addRoute('rentSearch', 'RentSearchCtrl', ["user","admin"]);
+
+Utils::addRoute('rentCar', 'RentCarCtrl', ["user","admin"]);
 
 
 

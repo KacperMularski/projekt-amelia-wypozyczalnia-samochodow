@@ -67,7 +67,7 @@
 
 										<section>
                                             <div class="form-border">
-                                                <h3>Wybierz miejsce i datę rezerwacji</h3>
+                                                <h3>Wybierz miejsce rezerwacji</h3>
 
                                                 
 
@@ -80,10 +80,10 @@
                                                         <select name="placowka" id="id_places" form="place">
                                                         <option value="none" selected disabled hidden selected>Wybierz miasto</option>
                                                         <option value="1">Dąbrowa Górnicza, ul.Sienkiewicza 2 </option>
-                                                        <option value="2">Sosnowiec</option>
-                                                        <option value="3">Chorzów</option>
-                                                        <option value="4">Katowice</option>
-                                                        <option value="5">Warszawa</option>
+                                                        <option value="2">Sosnowiec, ul.Krzywa 5</option>
+                                                        <option value="3">Katowice, ul.Piłsudskiego 22</option>
+                                                        <option value="4">Warszawa, ul.Złota 13</option>
+                                                        <option value="5">Poznań, ul.Korzenna 2</option>
                                                         </select>
                                                     {/if}
 
@@ -97,31 +97,31 @@
                                                             {/if}   
 
                                                             {if $form->placowka == 2}
-                                                                <option value="2" selected>Sosnowiec</option>    
+                                                                <option value="2" selected>Sosnowiec, ul.Krzywa 5</option>    
                                                             {/if}
                                                             {if $form->placowka != 2}
-                                                                <option value="2">Sosnowiec</option>    
+                                                                <option value="2">Sosnowiec, ul.Krzywa 5</option>    
                                                             {/if}
 
                                                             {if $form->placowka == 3}
-                                                                <option value="3" selected>Chorzów</option>
+                                                                <option value="3" selected>Katowice, ul.Piłsudskiego 22</option>
                                                             {/if}
                                                             {if $form->placowka != 3}
-                                                                <option value="3">Chorzów</option>
+                                                                <option value="3">Katowice, ul.Piłsudskiego 22</option>
                                                             {/if}
 
                                                             {if $form->placowka == 4}
-                                                                <option value="4" selected>Katowice</option>
+                                                                <option value="4" selected>Warszawa, ul.Złota 13</option>
                                                             {/if}
                                                             {if $form->placowka != 4}
-                                                                <option value="4">Katowice</option>
+                                                                <option value="4">Warszawa, ul.Złota 13</option>
                                                             {/if}
 
                                                             {if $form->placowka == 5}
-                                                                <option value="5" selected>Warszawa</option>
+                                                                <option value="5" selected>Poznań, ul.Korzenna 2</option>
                                                             {/if}
                                                             {if $form->placowka != 5}
-                                                                <option value="5">Warszawa</option>
+                                                                <option value="5">Poznań, ul.Korzenna 2</option>
                                                             {/if}
                                                 
                                                         </select>
@@ -129,6 +129,8 @@
 
 
                                                 </div></br>
+                                                
+                                                
                                                 <b>Data odbioru:</b>
                                                 <div class="row gtr-50">
 
@@ -157,7 +159,7 @@
                                                     </div>
                                                 {/if}
 
-                                                </div></br>
+                                                </div></br> 
 
                                                 <div class="row gtr-50">
                         
@@ -215,7 +217,21 @@
                                                         <br>
 
                                                 <b> Skrzynia biegów </b> <br> 
+                                                
 
+                                                    {if isset($checkbox1) && $checkbox1 == 1}
+                                                        <label class="check-box">Manualna
+                                                        <input type="checkbox" checked="checked" name="skrzynia[]" value="manual">
+                                                        <span class="checkmark_two"></span>
+                                                        </label>
+
+                                                        <label class="check-box">Automatyczna
+                                                        <input type="checkbox" name="skrzynia[]" value="automat">
+                                                        <span class="checkmark_two"></span>
+                                                        </label><br>
+                                                    {/if}
+
+                                                    {if isset($checkbox1) && $checkbox1 == 2}
                                                         <label class="check-box">Manualna
                                                         <input type="checkbox" checked="checked" name="skrzynia[]" value="manual">
                                                         <span class="checkmark_two"></span>
@@ -225,9 +241,47 @@
                                                         <input type="checkbox" checked="checked" name="skrzynia[]" value="automat">
                                                         <span class="checkmark_two"></span>
                                                         </label><br>
+                                                    {/if}
+
+                                                    {if isset($checkbox1) && $checkbox1 == 3}
+                                                        <label class="check-box">Manualna
+                                                        <input type="checkbox" name="skrzynia[]" value="manual">
+                                                        <span class="checkmark_two"></span>
+                                                        </label>
+
+                                                        <label class="check-box">Automatyczna
+                                                        <input type="checkbox" checked="checked" name="skrzynia[]" value="automat">
+                                                        <span class="checkmark_two"></span>
+                                                        </label><br>
+                                                    {/if}
+
+                                                    {if !isset($checkbox1) && !isset($skrzynia)}
+                                                        <label class="check-box">Manualna
+                                                        <input type="checkbox"  name="skrzynia[]"  value="manual">
+                                                        <span class="checkmark_two"></span>
+                                                        </label>
+
+                                                        <label class="check-box">Automatyczna
+                                                        <input type="checkbox"  name="skrzynia[]" value="automat">
+                                                        <span class="checkmark_two"></span>
+                                                        </label><br>
+                                                    {/if}
 
                                                 <b> Rodzaj paliwa </b> <br> 
 
+                                                {if isset($checkbox2) && $checkbox2 == 1}
+                                                        <label class="check-box">Benzyna
+                                                        <input type="checkbox" checked="checked" name="paliwo[]" value="benzyna">
+                                                        <span class="checkmark_two"></span>
+                                                        </label>
+
+                                                        <label class="check-box">Diesel
+                                                        <input type="checkbox"  name="paliwo[]" value="diesel">
+                                                        <span class="checkmark_two"></span>
+                                                        </label><br>
+                                                {/if}
+
+                                                {if isset($checkbox2) && $checkbox2 == 2}
                                                         <label class="check-box">Benzyna
                                                         <input type="checkbox" checked="checked" name="paliwo[]" value="benzyna">
                                                         <span class="checkmark_two"></span>
@@ -237,6 +291,31 @@
                                                         <input type="checkbox" checked="checked" name="paliwo[]" value="diesel">
                                                         <span class="checkmark_two"></span>
                                                         </label><br>
+                                                {/if}
+
+                                                {if isset($checkbox2) && $checkbox2 == 3}
+                                                        <label class="check-box">Benzyna
+                                                        <input type="checkbox" name="paliwo[]" value="benzyna">
+                                                        <span class="checkmark_two"></span>
+                                                        </label>
+
+                                                        <label class="check-box">Diesel
+                                                        <input type="checkbox" checked="checked" name="paliwo[]" value="diesel">
+                                                        <span class="checkmark_two"></span>
+                                                        </label><br>
+                                                {/if}
+
+                                                {if !isset($checkbox2) && !isset($skrzynia)}
+                                                        <label class="check-box">Benzyna
+                                                        <input type="checkbox" name="paliwo[]" value="benzyna">
+                                                        <span class="checkmark_two"></span>
+                                                        </label>
+
+                                                        <label class="check-box">Diesel
+                                                        <input type="checkbox" name="paliwo[]" value="diesel">
+                                                        <span class="checkmark_two"></span>
+                                                        </label><br>
+                                                {/if}
                                             </form>	
                                         </div>
 										</section>
@@ -251,38 +330,54 @@
 
 										<article>
 											<header>
+                                            {if !isset($vehicle)}   
 												<h2>Wypełnij dane rezerwacji</h2>
+                                            {/if}
+
+                                            {if isset($vehicle)}   
+												<h2>Liczba wyników: {$vehicles_count}</h2>
+                                            {/if}
+
+
 
                                                 {if $msgs->getMessages()}
-										<h3> Błędy: </h3>
-										<ol class="errors">
-										{foreach $msgs->getMessages() as $msg}
-										<li>
-		
-														{if $msg->isError()}
-														
-														{/if}
-											{$msg->text}
-											</br></li>
+										        <h3> Błędy: </h3>
+                                                <ol class="errors">
+                                                    {foreach $msgs->getMessages() as $msg}
+                                                    <li>
+                                                        {if $msg->isError()}
+                                                        {/if}
+                                                        {$msg->text}
+                                                        </br>
+                                                    </li>
 
-										{/foreach}
-										</ol>
-										{/if}
+                                                    {/foreach}
+										        </ol>
+										        {/if}
 
-                                        <!-- 
-                                        {$form->placowka}
-                                        {$form->data_wyp}
-                                        {$form->data_zw}
-                                        {$form->cena}
-                                        {foreach $form->skrzynia as $value}
-                                                {$value} <br/>
-                                        {/foreach}
 
+                                    {if isset($vehicle)}    
+                                        {foreach $vehicle as $value}
+
+                                        <a href ="{url action='rentCar' pojazd=$value['id_pojazdu'] placowka=$form->placowka}">
+                                        <div class="imgBorder">
+                                        <img src="car_image/{$value["img"]}" alt="" />
                                         
-                                        {foreach $form->paliwo as $value}
-                                                {$value} <br/>
+                                        <ul>
+                                        <h1>{$value["marka"]} {$value["model"]}</h1>
+                                        <li><i class="fa-solid fa-rocket"></i> {$value["poj_silnika"]}cm<sup>3</sup> </li>
+                                        <li><i class="fa-solid fa-gas-pump"></i> {$value["rodz_paliwa"]} </li>
+                                        <li><i class="fa-solid fa-gears"></i> {$value["skrzynia"]} </li>
+                                        <li><i class="fa-solid fa-people-group"></i> Miejsca: {$value["liczba_miejsc"]} </li>
+                                        <h2> Cena za dobę: {$value["cena_doba"]}zł </h2>
+
+                                        </ul>
+                                        
+                                        </div></a>
+                                        <br>
+                    
                                         {/foreach}
-                                        -->
+                                    {/if}
 						
 											</header>
 

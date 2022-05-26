@@ -116,6 +116,8 @@ public function action_logout() {
 
     SessionUtils::remove("user_id");
     SessionUtils::remove("user_login");
+    SessionUtils::remove("data_wyp");
+    SessionUtils::remove("data_zw");
     
 
     session_destroy();

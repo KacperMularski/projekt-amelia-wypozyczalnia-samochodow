@@ -1,5 +1,6 @@
 <?php
 $conf->debug = true; # set true during development and use in your code (for instance check if true to send additional message)
+$conf->clean_urls = true;
 
 # ---- Webapp location
 $conf->server_name = 'localhost';   # server address and port
