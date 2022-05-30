@@ -136,12 +136,12 @@
 
                                                 {if !isset($form->data_wyp)}
                                                     <div class="col-6 col-12-mobilep">
-                                                        <input id="id_data_wyp" type="date"  name="data_wyp"  />	
+                                                        <input id="id_data_wyp" type="date"  name="data_wyp" min="{date("Y-m-d")}" />	
                                                     </div>
                                                 {/if}
                                                 {if isset($form->data_wyp)}
                                                     <div class="col-6 col-12-mobilep">
-                                                        <input id="id_data_wyp" type="date"  name="data_wyp" value="{$form->data_wyp}" />	
+                                                        <input id="id_data_wyp" type="date"  name="data_wyp" min="{date("Y-m-d")}" value="{$form->data_wyp}" />	
                                                     </div>
                                                 {/if}
 
@@ -150,12 +150,12 @@
                                                 <div class="row gtr-50">
                                                 {if !isset($form->data_zw)}
                                                     <div class="col-6 col-12-mobilep">
-                                                        <input id="id_data_wyp" type="date"  name="data_zw"  />	
+                                                        <input id="id_data_wyp" type="date" min="{date("Y-m-d", strtotime(" + 1 day"))}"  name="data_zw"  />	
                                                     </div>
                                                 {/if}
                                                 {if isset($form->data_zw)}
                                                     <div class="col-6 col-12-mobilep">
-                                                        <input id="id_data_wyp" type="date"  name="data_zw" value="{$form->data_zw}"/>	
+                                                        <input id="id_data_wyp" type="date" min="{date("Y-m-d", strtotime(" + 1 day"))}" name="data_zw" value="{$form->data_zw}"/>	
                                                     </div>
                                                 {/if}
 

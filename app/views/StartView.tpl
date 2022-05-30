@@ -62,6 +62,7 @@
         <header class="major">
             <h2>Wypożyczalnia samochodów RacingCars to świetny wybór</h2>
             <p>Przekonaj się sam!</p>
+            
         </header>
         
     </div>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-26 21:04:46
+/* Smarty version 4.1.0, created on 2022-05-29 18:10:07
   from 'C:\xampp\htdocs\amelia\app\views\RentView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_628fcf4e597070_06311231',
+  'unifunc' => 'content_62939adf0ff9c9_43013127',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5a88495884436599893f709820300ebed29dc25a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\RentView.tpl',
-      1 => 1653591882,
+      1 => 1653840598,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_628fcf4e597070_06311231 (Smarty_Internal_Template $_smarty_tpl) {
+function content_62939adf0ff9c9_43013127 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_476295826628fcf4e56b794_58635626', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_92056692062939adf0d1864_93278082', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1570884159628fcf4e56c107_87287070', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21077485662939adf0d2188_15257506', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_456893358628fcf4e573413_05805978', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_23870517862939adf0d91e7_20964460', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_476295826628fcf4e56b794_58635626 extends Smarty_Internal_Block
+class Block_92056692062939adf0d1864_93278082 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_476295826628fcf4e56b794_58635626',
+    0 => 'Block_92056692062939adf0d1864_93278082',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_1570884159628fcf4e56c107_87287070 extends Smarty_Internal_Block
+class Block_21077485662939adf0d2188_15257506 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_1570884159628fcf4e56c107_87287070',
+    0 => 'Block_21077485662939adf0d2188_15257506',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -93,12 +93,12 @@ register_page">Zarejestruj</a></li>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_456893358628fcf4e573413_05805978 extends Smarty_Internal_Block
+class Block_23870517862939adf0d91e7_20964460 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_456893358628fcf4e573413_05805978',
+    0 => 'Block_23870517862939adf0d91e7_20964460',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -219,12 +219,14 @@ rentSearch" method="post" id="place">
 
                                                 <?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->data_wyp))) {?>
                                                     <div class="col-6 col-12-mobilep">
-                                                        <input id="id_data_wyp" type="date"  name="data_wyp"  />	
+                                                        <input id="id_data_wyp" type="date"  name="data_wyp" min="<?php echo date("Y-m-d");?>
+" />	
                                                     </div>
                                                 <?php }?>
                                                 <?php if ((isset($_smarty_tpl->tpl_vars['form']->value->data_wyp))) {?>
                                                     <div class="col-6 col-12-mobilep">
-                                                        <input id="id_data_wyp" type="date"  name="data_wyp" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->data_wyp;?>
+                                                        <input id="id_data_wyp" type="date"  name="data_wyp" min="<?php echo date("Y-m-d");?>
+" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->data_wyp;?>
 " />	
                                                     </div>
                                                 <?php }?>
@@ -234,12 +236,14 @@ rentSearch" method="post" id="place">
                                                 <div class="row gtr-50">
                                                 <?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->data_zw))) {?>
                                                     <div class="col-6 col-12-mobilep">
-                                                        <input id="id_data_wyp" type="date"  name="data_zw"  />	
+                                                        <input id="id_data_wyp" type="date" min="<?php echo date("Y-m-d",strtotime(" + 1 day"));?>
+"  name="data_zw"  />	
                                                     </div>
                                                 <?php }?>
                                                 <?php if ((isset($_smarty_tpl->tpl_vars['form']->value->data_zw))) {?>
                                                     <div class="col-6 col-12-mobilep">
-                                                        <input id="id_data_wyp" type="date"  name="data_zw" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->data_zw;?>
+                                                        <input id="id_data_wyp" type="date" min="<?php echo date("Y-m-d",strtotime(" + 1 day"));?>
+" name="data_zw" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->data_zw;?>
 "/>	
                                                     </div>
                                                 <?php }?>

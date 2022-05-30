@@ -280,6 +280,31 @@ a:active {
     padding-left: 8px;
 
   }
+
+
+  .rentCarInfo h2 {
+    font-size: 20px;
+    
+  }
+
+  .rentCarInfo h3 {
+    font-size: 30px;
+    
+  }
+
+  .rentCarInfo li {
+
+    text-align: center;
+    font-size: 25px;
+    list-style: none; 
+}
+
+.rentCarInfo-border ul {
+
+    display: inline-block;
+    text-align: center;
+       
+}
   
   
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-26 21:18:26
+/* Smarty version 4.1.0, created on 2022-05-29 15:39:38
   from 'C:\xampp\htdocs\amelia\app\views\RentCarView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_628fd282efa3b6_16273776',
+  'unifunc' => 'content_6293779aeffd96_22262318',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0c7e2d0b2e1475282287dc9c88a6752ecac5bb72' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\RentCarView.tpl',
-      1 => 1653592705,
+      1 => 1653831577,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,36 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_628fd282efa3b6_16273776 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6293779aeffd96_22262318 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1512351036628fd282ee9c52_58911620', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_15555133276293779aeee936_84906985', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_160533326628fd282eea793_70675132', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_3296925886293779aeef262_59472825', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1181545683628fd282ef26b2_82132025', 'content');
-$_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_13474497896293779aef6811_53728320', 'content');
+?>
+
+
+<?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_1512351036628fd282ee9c52_58911620 extends Smarty_Internal_Block
+class Block_15555133276293779aeee936_84906985 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_1512351036628fd282ee9c52_58911620',
+    0 => 'Block_15555133276293779aeee936_84906985',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +59,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_160533326628fd282eea793_70675132 extends Smarty_Internal_Block
+class Block_3296925886293779aeef262_59472825 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_160533326628fd282eea793_70675132',
+    0 => 'Block_3296925886293779aeef262_59472825',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -93,12 +96,12 @@ register_page">Zarejestruj</a></li>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_1181545683628fd282ef26b2_82132025 extends Smarty_Internal_Block
+class Block_13474497896293779aef6811_53728320 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1181545683628fd282ef26b2_82132025',
+    0 => 'Block_13474497896293779aef6811_53728320',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -113,6 +116,10 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 								<article>
 									<header>
+
+                                        <h2> Wybierz formę płatności i sfinalizuj zamówienie </h2>
+                                    
+									</header>
 
 										<?php if ($_smarty_tpl->tpl_vars['msgs']->value->getMessages()) {?>
 										        <h3> Błędy: </h3>
@@ -137,9 +144,13 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 										        </ol>
 										        <?php }?>
 										
-									</header>
+
                                     
-                                    id_pojazdu: <?php echo $_smarty_tpl->tpl_vars['id_pojazdu']->value;?>
+                                    <h2> Szczegóły rezerwacji </h2>
+                                    <img src="car_image/ford_mustang.png" alt="nie działa" />
+                                    <?php echo $_smarty_tpl->tpl_vars['vehicle']->value["img"];?>
+
+                                    id_pojazdu:<?php echo $_smarty_tpl->tpl_vars['vehicle']->value["id_pojazdu"];?>
  
                                     <br>
                                     id_usera: <?php echo \core\SessionUtils::load("user_id",true);?>
@@ -153,17 +164,25 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                     <br>
                                     data_zw: <?php echo $_smarty_tpl->tpl_vars['data_zw']->value;?>
 
-                    
-									
+                                    <br>
+                                    wartosc rezerwacji: <?php echo $_smarty_tpl->tpl_vars['rentValue']->value;?>
+ <br>
+                                    <?php echo date("Y-m-d");?>
 
-									<!--<span class="image featured"><img src="images/banner.jpg" alt="" /></span>-->
+                                    
 
-									
-								</article>
+                                    
+                                    	
 
-						</div>
+								<img src="car_image/ford_mustang.png" alt="nie działa" />	
+							</article>
+
+                                
+
+
+						</div>                       
 					</div>
-				</section>
+</section>
 
 <?php
 }

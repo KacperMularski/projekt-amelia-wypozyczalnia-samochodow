@@ -32,6 +32,10 @@
 								<article>
 									<header>
 
+                                        <h2> Wybierz formę płatności i sfinalizuj zamówienie </h2>
+                                    
+									</header>
+
 										{if $msgs->getMessages()}
 										        <h3> Błędy: </h3>
                                                 <ol class="errors">
@@ -47,9 +51,12 @@
 										        </ol>
 										        {/if}
 										
-									</header>
+
                                     
-                                    id_pojazdu: {$id_pojazdu} 
+                                    <h2> Szczegóły rezerwacji </h2>
+                                    <img src="car_image/ford_mustang.png" alt="nie działa" />
+                                    {$vehicle["img"]}
+                                    id_pojazdu:{$vehicle["id_pojazdu"]} 
                                     <br>
                                     id_usera: {\core\SessionUtils::load("user_id", true)}
                                     <br>
@@ -58,16 +65,23 @@
                                     data_wyp: {$data_wyp}
                                     <br>
                                     data_zw: {$data_zw}
-                    
-									
+                                    <br>
+                                    wartosc rezerwacji: {$rentValue} <br>
+                                    {date("Y-m-d")}
+                                    
 
-									<!--<span class="image featured"><img src="images/banner.jpg" alt="" /></span>-->
+                                    
+                                    	
 
-									
-								</article>
+								<img src="car_image/ford_mustang.png" alt="nie działa" />	
+							</article>
 
-						</div>
+                                
+
+
+						</div>                       
 					</div>
-				</section>
+</section>
 
 {/block}
+
