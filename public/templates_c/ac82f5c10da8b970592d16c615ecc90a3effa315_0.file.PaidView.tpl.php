@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-30 13:59:12
+/* Smarty version 4.1.0, created on 2022-05-31 11:24:05
   from 'C:\xampp\htdocs\amelia\app\views\PaidView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_6294b19027bf43_19228701',
+  'unifunc' => 'content_6295deb5061316_98738836',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ac82f5c10da8b970592d16c615ecc90a3effa315' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\PaidView.tpl',
-      1 => 1653911950,
+      1 => 1653989032,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6294b19027bf43_19228701 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6295deb5061316_98738836 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_17995210016294b190274608_34824723', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_20519504676295deb505c0d6_78703782', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_12751550846294b1902750f1_64211137', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14392098936295deb505cb87_72653556', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19437927736294b190279648_99019249', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1002993646295deb5060d71_71799030', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_17995210016294b190274608_34824723 extends Smarty_Internal_Block
+class Block_20519504676295deb505c0d6_78703782 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_17995210016294b190274608_34824723',
+    0 => 'Block_20519504676295deb505c0d6_78703782',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_12751550846294b1902750f1_64211137 extends Smarty_Internal_Block
+class Block_14392098936295deb505cb87_72653556 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_12751550846294b1902750f1_64211137',
+    0 => 'Block_14392098936295deb505cb87_72653556',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -82,12 +82,12 @@ offer_page">Oferta</a></li>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_19437927736294b190279648_99019249 extends Smarty_Internal_Block
+class Block_1002993646295deb5060d71_71799030 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_19437927736294b190279648_99019249',
+    0 => 'Block_1002993646295deb5060d71_71799030',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -103,19 +103,9 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 								<article>
 									<header>
 
-									
-                                    <?php echo $_smarty_tpl->tpl_vars['form']->value->platnosc;?>
- <br>
-                                    <?php echo $_smarty_tpl->tpl_vars['form']->value->id_pojazdu;?>
- <br>
-                                    <?php echo $_smarty_tpl->tpl_vars['form']->value->placowka;?>
- <br>
-                                    <?php echo $_smarty_tpl->tpl_vars['form']->value->rentValue;?>
- <br>
-                                    <?php echo $_smarty_tpl->tpl_vars['form']->value->data_wyp;?>
- <br>
-                                    <?php echo $_smarty_tpl->tpl_vars['form']->value->data_zw;?>
-
+									<h2> Rezerwacja powiodła się pomyślnie !</h2> <br>
+									<p> Samochód jest gotowy od odbioru </p>
+                                   
 										
 									</header>
 

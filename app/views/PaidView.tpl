@@ -23,13 +23,9 @@
 								<article>
 									<header>
 
-									
-                                    {$form->platnosc } <br>
-                                    {$form->id_pojazdu } <br>
-                                    {$form->placowka } <br>
-                                    {$form->rentValue } <br>
-                                    {$form->data_wyp } <br>
-                                    {$form->data_zw }
+									<h2> Rezerwacja powiodła się pomyślnie !</h2> <br>
+									<p> Samochód jest gotowy od odbioru </p>
+                                   
 										
 									</header>
 

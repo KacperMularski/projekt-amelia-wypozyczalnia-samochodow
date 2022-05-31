@@ -43,6 +43,8 @@ Utils::addRoute('rentCar', 'RentCarCtrl', ["user","admin"]);
 
 Utils::addRoute('rentPay', 'PaidCtrl', ["user","admin"]);
 
+Utils::addRoute('rentHistory', 'RentHistoryCtrl', ["user","admin"]);
+
 
 
 

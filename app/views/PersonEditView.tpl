@@ -48,7 +48,7 @@
 												<td colspan="3" align="center">
 													<a href="{$conf->action_url}editForm" class="button">Edytuj</a> 
 													<a href="{$conf->action_url}passwordChange" class="button">Zmień hasło</a>
-													<a href="#" class="button">Wypożyczenia</a>
+													<a href="{$conf->action_url}rentHistory" class="button">Wypożyczenia</a>
 												</td> 
 											</tr>
 										</thead>

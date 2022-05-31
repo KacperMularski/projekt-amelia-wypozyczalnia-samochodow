@@ -61,10 +61,10 @@ public function validate() {
 
     try {
 
-            $this->vehicle = App::getDB() -> has("samochod", ["id_pojazdu" => $this->id_pojazdu]);
+            $vehicle = App::getDB() -> has("samochod", ["id_pojazdu" => $this->id_pojazdu]);
             $place = App::getDB() -> has("samochod", ["placowka_id_placowki" => $this->placowka]);
 
-            if(! $this->vehicle) {
+            if(! $vehicle) {
                 App::getMessages()->addMessage(new \core\Message("Nie istnieje pojazd o wybranym numerze!", \core\Message::ERROR));    
             }
 
@@ -76,7 +76,7 @@ public function validate() {
 
                 $available = App::getDB() -> has("samochod", ["id_pojazdu" => $this->id_pojazdu, "czy_wypoz" => "tak"]);
 
-                if($available) {
+                if( $available) {
                     App::getMessages()->addMessage(new \core\Message("Ten pojazd został już wypożyczony", \core\Message::ERROR));    
                 }
 
@@ -140,7 +140,6 @@ public function action_rentCar(){
 
 
 public function generateView(){
-
     
     App::getSmarty()->assign('vehicle',$this->vehicle); 
     App::getSmarty()->assign('placowka',$this->placowka); 

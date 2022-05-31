@@ -48,6 +48,7 @@ public function validate() {
 
 
 public function result(){
+    
     if (! App::getMessages()->isError()) {
 
         try {
@@ -72,7 +73,7 @@ public function result(){
 
     else {
 
-     $this->errorGenerateView(); 
+        $this->errorGenerateView(); 
 
     }
 
@@ -96,8 +97,7 @@ public function paidGenerateView() {
 }
 
 public function errorGenerateView() {
-
-    
+  
     App::getSmarty()->assign('page_title','RacingCars');      
     App::getSmarty()->display("ErrorPageView.tpl"); 
 
