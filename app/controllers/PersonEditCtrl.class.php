@@ -10,6 +10,7 @@ use core\Utils;
 use core\RoleUtils;
 use core\SessionUtils;
 use app\forms\UserEditForm;
+use core\Validator;
 
 
 class PersonEditCtrl {
@@ -28,7 +29,7 @@ public function idValidate() {
         App::getMessages()->addMessage(new \core\Message("Błąd wczytywania id", \core\Message::ERROR));
     }
 
-    return !App::getMessages()->isError();
+    return ! App::getMessages()->isError();
 }
 
 
@@ -91,29 +92,64 @@ public function editFormValidate() {
     if (! (isset($this->form->login) && isset($this->form->email) && isset($this->form->imie) && isset($this->form->nazwisko) && isset($this->form->nr_pr_jazdy) && isset($this->form->nr_tel) && isset($this->form->data_ur))) {
 			return false;
 			}
-		
 
-		if ($this->form->login == "") {
-            App::getMessages()->addMessage(new \core\Message("Nie podano nazwy użytkownika!", \core\Message::ERROR));
-		}
-		if ($this->form->email == "") {
-            App::getMessages()->addMessage(new \core\Message("Nie podano adresu email!", \core\Message::ERROR));    
-		}
-        if ($this->form->imie == "") {
-            App::getMessages()->addMessage(new \core\Message("Nie podano imienia!", \core\Message::ERROR));
-        }
-        if ($this->form->nazwisko == "") {
-                App::getMessages()->addMessage(new \core\Message("Nie podano nazwiska!", \core\Message::ERROR));    
-        }
-        if ($this->form->nr_pr_jazdy == "") {
-                App::getMessages()->addMessage(new \core\Message("Nie podano numeru prawa jazdy!", \core\Message::ERROR)); 
-        }
-        if ($this->form->nr_tel == "") {
-                App::getMessages()->addMessage(new \core\Message("Nie podano numeru telefonu!", \core\Message::ERROR)); 
-        }
-        if ($this->form->data_ur == "") {
-                App::getMessages()->addMessage(new \core\Message("Nie podano daty urodzenia!", \core\Message::ERROR)); 
-        }
+            $val = new Validator();
+
+            $val->validate($this->form->login,[
+                'trim' => true,
+                'required' => true,
+                'min_length' => 5,
+                'required_message' => 'Nie wybrano loginu',
+                'validator_message' => 'Login jest zbyt krótki (min 5 znaków)'
+            ]);
+
+            $val->validate($this->form->email,[
+                'trim' => true,
+                'required' => true,
+                'email' => true,
+                'required_message' => 'Nie wybrano adresu email',
+                'validator_message' => 'Zły format adresu'
+            ]);
+
+            $val->validate($this->form->imie,[
+                'trim' => true,
+                'required' => true,
+                'required_message' => 'Nie wybrano imienia'
+            ]);
+
+            $val->validate($this->form->nazwisko,[
+                'trim' => true,
+                'required' => true,
+                'required_message' => 'Nie wybrano nazwiska'
+            ]);
+
+            $val->validate($this->form->nr_pr_jazdy,[
+                'trim' => true,
+                'required' => true,
+                'min_length' => 11, 
+                'max_length' => 11, 
+                'int' => true,
+                'required_message' => 'Nie wybrano numeru prawa jazdy',
+                'validator_message' => 'Zły format numeru prawa jazdy (11 cyfr)'
+
+            ]);
+
+            $val->validate($this->form->nr_tel,[
+                'trim' => true,
+                'required' => true,
+                'min_length' => 11, 
+                'max_length' => 11, 
+                'int' => true,
+                'required_message' => 'Nie wybrano numeru telefonu',
+                'validator_message' => 'Zły format numeru telefonu (11 cyfr, 48...)'
+            ]);
+
+            $val->validate($this->form->data_ur,[
+                'required' => true,
+                'date_format' => 'Y-m-d',
+                'required_message' => 'Nie wybrano daty urodzenia',
+                'validator_message' => 'Zły format numeru daty (Y-m-d)'
+            ]);
 
         if(! App::getMessages()->isError()) {
 
@@ -141,25 +177,8 @@ public function editFormValidate() {
 		}
         }
 
-        }
+    }
         
-        if(! App::getMessages()->isError()) {
-
-            if (strlen($this->form->login) < 5) {
-                App::getMessages()->addMessage(new \core\Message("Login jest zbyt krótki!", \core\Message::ERROR)); 
-            }
-        }
-
-         if(! App::getMessages()->isError()) {
-
-            if ( ! is_numeric( $this->form->nr_pr_jazdy ) && ! $this->form->nr_pr_jazdy < 11) {
-                App::getMessages()->addMessage(new \core\Message("Numer musi być liczbą całkowitą o długości 11 znaków!", \core\Message::ERROR)); 
-            }
-            if ( ! is_numeric( $this->form->nr_tel ) && ! $this->form->nr_tel < 11) {
-                App::getMessages()->addMessage(new \core\Message("Numer telefonu musi być liczbą całkowitąo o długości 11 znaków!", \core\Message::ERROR)); 
-            }
-        }   
-	
 		return ! App::getMessages()->isError();    
 	
 
@@ -184,10 +203,7 @@ public function action_editForm() {
     $this->idValidate();
     $this->loadParameters();
     $this->validate();
-
     $this->generateView();
-
-
 
 }
 
@@ -207,14 +223,7 @@ public function action_savePersonEdit() {
 
         }
 
-    $this->editFormValidate();
-
-    if( App::getMessages()->isError()) {
-   
-        $this->generateView();
-    }
-
-    if( ! App::getMessages()->isError()) {
+    if($this->editFormValidate()) {
 
         try {
             App::getDB() ->  update("konto", ["login" => $this->form->login, "email" => $this->form->email], ["id_konta" => $this->id ] );
@@ -229,9 +238,10 @@ public function action_savePersonEdit() {
 
         App::getMessages()->addMessage(new \core\Message("Edycja przebiegła pomyślnie !", \core\Message::INFO));    
         App::getRouter()->forwardTo('personEdit');
-        
 
-    }
+    } else {
+        $this->generateView();
+    }  
 }
 
 public function generateView() {

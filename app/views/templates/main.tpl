@@ -23,13 +23,13 @@
 					<!-- Logo -->
 					
 						<h1><a href="{$conf->app_root}" id="logo"> <em>Wypożyczalnia samochodów</em> RacingCars</a></h1>
-						
 
                 <nav id="nav">
                     <!-- menu -->
 
 					<ul>
                         {block name=menu} Domyślna zawartość menu... {/block}
+
 
 					{if count($conf->roles)>0}
     				<li><a href="{$conf->action_url}logout">Wyloguj</a></li>

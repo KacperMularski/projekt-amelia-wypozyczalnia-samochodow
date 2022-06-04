@@ -64,9 +64,8 @@ public function validate() {
     $val->validate($this->form->new_pass,[
         'required' => true,
         'required_message' => 'Hasło jest wymagane',
-        //'regexp' => "/(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{5,}/",
         'regexp' => "/(.{8,})/",
-        'validator_message' => 'Hasło powinno mieć conajmniej 8 znaków'
+        'validator_message' => 'Hasło powinno mieć co najmniej 8 znaków'
     ]);
 
     $val->validate($this->form->new_pass_repeat,[

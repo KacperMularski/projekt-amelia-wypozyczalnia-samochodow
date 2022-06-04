@@ -10,6 +10,11 @@
     <li><a href="{$conf->action_url}offer_page">Oferta</a></li>
     <li><a href="#">Rejestracja</a></li>
 
+	{if \core\RoleUtils::inRole("admin")}
+		<li><b><a href="{$conf->action_url}adminUzytkownicyPage">Panel Administratora</a></b>
+		</li>	
+	{/if}
+
 {/block}
 
 {block name=content}
@@ -17,8 +22,6 @@
 <section class="wrapper style1">
 					<div class="container">
 						<div id="content">
-
-							<!-- Content -->
 
 								<article>
 									<header>
@@ -39,16 +42,11 @@
 										{/if}
 										
 									</header>
-
-									
-
-									<!--<span class="image featured"><img src="images/banner.jpg" alt="" /></span>-->
-
 									
 								</article>
 
 						</div>
 					</div>
-				</section>
+</section>
 
 {/block}

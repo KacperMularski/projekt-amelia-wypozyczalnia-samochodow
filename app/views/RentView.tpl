@@ -18,6 +18,11 @@
 
         </ul>
     </li>
+
+    {if \core\RoleUtils::inRole("admin")}
+		<li><b><a href="{$conf->action_url}adminUzytkownicyPage">Panel Administratora</a></b>
+		</li>	
+	{/if}
     
 {/block}
 
@@ -26,8 +31,6 @@
 <section class="wrapper style1">
 					<div class="container">
 						<div id="content">
-
-							<!-- Content -->
 
 								<article>
 									<header>
@@ -44,13 +47,6 @@
                                     
 									</header>
                                     </br></br>
-
-                                    
-
-									
-
-									<!--<span class="image featured"><img src="images/banner.jpg" alt="" /></span>-->
-
 									
 								</article>
 
@@ -68,8 +64,6 @@
 										<section>
                                             <div class="form-border">
                                                 <h3>Wybierz miejsce rezerwacji</h3>
-
-                                                
 
                                                 <form action="{$conf->action_url}rentSearch" method="post" id="place">
 
@@ -177,8 +171,6 @@
 										<div class="form-border">
 
                                             <h3>Filtry</h3>
-
-                                            
 
                                                 <b> Cena </b> </br>
                                                         {if isset($form->cena) && $form->cena == "rosnaco"}
@@ -326,8 +318,6 @@
 							<div class="col-8  col-12-narrower imp-narrower">
 								<div id="content">
 
-									<!-- Content -->
-
 										<article>
 											<header>
                                             {if !isset($vehicle)}   
@@ -379,13 +369,11 @@
                                         {/foreach}
                                     {/if}
 						
-											</header>
+										</header>
 
 
                                         </article>
-
-											
-
+	
 								</div>
 							</div>
 						</div>

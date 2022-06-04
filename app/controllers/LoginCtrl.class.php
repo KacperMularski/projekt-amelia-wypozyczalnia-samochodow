@@ -12,9 +12,6 @@ use core\RoleUtils;
 use core\SessionUtils;
 
 
-
-
-
 class LoginCtrl {
 
 private $form;
@@ -24,8 +21,6 @@ private $form;
         $this->form = new LoginForm();
 
     }
-
-//Dane drugi formularz rejestracji
 
     public function getParams() {
     
@@ -72,43 +67,36 @@ private $form;
 
 public function action_login() {
 
-$this->getParams();
-$this->validate();
+    $this->getParams();
 
-if(App::getMessages()->isError()) {
+    if ($this->validate()) {
+        try {
+            //Dodanie do sesji id zalogowanego uzytkownika (potrzebne do złożenia zamówienia)
+            $user_log = App::getDB() -> get("konto", ["osoba_id_osoby", "login"],["login" => $this->form->login, "haslo" => $this->form->password]);
+            $admin_log = App::getDB() -> has("konto", ["osoba_id_osoby" => $user_log["osoba_id_osoby"], "rola" => "admin"]);
+            SessionUtils::store("user_id", $user_log["osoba_id_osoby"]);
+            SessionUtils::store("user_login", $user_log["login"]);
+
+            if ($admin_log) {
+            RoleUtils::addRole("admin");    
+            }
+            if (!$admin_log) {
+            RoleUtils::addRole("user");
+            }
+
+            
+                    
+            } catch (\PDOException $ex) {
+            App::getMessages()->addMessage(new \core\Message("Błąd bazy danych!", \core\Message::ERROR)); 
+            }
+
+        App::getRouter()->redirectTo('start');
+
+    } else {
+   
+      $this->generateView();  
         
-    App::getSmarty()->assign('form', $this->form);
-    App::getSmarty()->assign('page_title','RacingCars');      
-    App::getSmarty()->display("LoginView.tpl");
-    
-}
-
-if( ! App::getMessages()->isError()) {
-
-    try {
-        //Dodanie do sesji id zalogowanego uzytkownika (potrzebne do złożenia zamówienia)
-        $user_log = App::getDB() -> get("konto", ["osoba_id_osoby", "login"],["login" => $this->form->login, "haslo" => $this->form->password]);
-        $admin_log = App::getDB() -> has("konto", ["osoba_id_osoby" => $user_log["osoba_id_osoby"], "rola" => "admin"]);
-        SessionUtils::store("user_id", $user_log["osoba_id_osoby"]);
-        SessionUtils::store("user_login", $user_log["login"]);
-
-        if ($admin_log) {
-        RoleUtils::addRole("admin");    
-        }
-        if (!$admin_log) {
-        RoleUtils::addRole("user");
-        }
-
-        
-                
-        } catch (\PDOException $ex) {
-        App::getMessages()->addMessage(new \core\Message("Błąd bazy danych!", \core\Message::ERROR)); 
-        }
-
-        
-
-    App::getRouter()->redirectTo('start');
-}
+    }
 
 }
 
@@ -119,16 +107,18 @@ public function action_logout() {
     SessionUtils::remove("data_wyp");
     SessionUtils::remove("data_zw");
     
-
     session_destroy();
     
     App::getRouter()->redirectTo("start");
 
 }
 
+public function generateView() {
 
-
-
+    App::getSmarty()->assign('form', $this->form);
+    App::getSmarty()->assign('page_title','RacingCars');      
+    App::getSmarty()->display("LoginView.tpl");
+}
 
 
 }

@@ -31,7 +31,6 @@ public function getParams() {
     $this->data_wyp = \core\SessionUtils::load("data_wyp", true);
     $this->data_zw = \core\SessionUtils::load("data_zw", true);
     
-    
 }
 
 
@@ -159,9 +158,5 @@ public function errorGenerateView() {
     App::getSmarty()->display("ErrorPageView.tpl"); 
 
 }
-
-
-
-
 
 }

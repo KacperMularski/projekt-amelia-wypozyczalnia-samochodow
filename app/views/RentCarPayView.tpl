@@ -19,6 +19,11 @@
         </ul>
     </li>
 
+    {if \core\RoleUtils::inRole("admin")}
+		<li><b><a href="{$conf->action_url}adminUzytkownicyPage">Panel Administratora</a></b>
+		</li>	
+	{/if}
+
 {/block}
 
 {block name=content}
@@ -26,8 +31,6 @@
 <section class="wrapper style1">
 					<div class="container">
 						<div id="content">
-
-							<!-- Content -->
 
 								<article>
 									<header>
@@ -50,15 +53,13 @@
                                                     {/foreach}
 										        </ol>
 										        {/if}
-										
-
+							
                                     
-                                    
-                                    <h3 class="rentCarInfo"> Data wypożyczenia: <i>  {$data_wyp}</i> </h3>
-                                    
-                                    <h3 class="rentCarInfo"> Data zwrotu: <i>  {$data_zw}</i>  </h3>
-                                    
-                    
+                                        <h3 class="rentCarInfo"> Data wypożyczenia: <i>  {$data_wyp}</i> </h3>
+                                            
+                                        <h3 class="rentCarInfo"> Data zwrotu: <i>  {$data_zw}</i>  </h3>
+                                            
+                            
                                     
                                         <div class="imgBorder">
                                         <img src="{$conf->app_root}/car_image/{$vehicle["img"]}" alt="" />
@@ -78,65 +79,43 @@
                                         
                                        
                                     
-                                    <h3> Wartość rezerwacji:</h3> </h2><h3><i>{$daysValue} x {$vehicle["cena_doba"]}zł </i> </h3>
-                                    <hr style="height: 2px; background: gray; border: 0px;"> 
-                                    <h3>Do zapłacenia: <i> {$rentValue} zł </i></h3>
-                                    <hr style="height: 2px; background: gray; border: 0px;"> 
-                                    
-                                    <form action="{$conf->action_url}rentPay" method="post" id="pay">
+                                        <h3> Wartość rezerwacji:</h3> </h2><h3><i>{$daysValue} x {$vehicle["cena_doba"]}zł </i> </h3>
+                                        <hr style="height: 2px; background: gray; border: 0px;"> 
+                                        <h3>Do zapłacenia: <i> {$rentValue} zł </i></h3>
+                                        <hr style="height: 2px; background: gray; border: 0px;"> 
+                                        
+                                        <form action="{$conf->action_url}rentPay" method="post" id="pay">
 
-                                                
-                                                <b>Wybierz formę płatności</b><br>
-                                                <div class="box">
                                                     
-                                                        <select name="platnosc" id="id_platnosc" form="pay">
-                                                            <option value="Przelew">Przelew</option>
-                                                            <option value="PayU">PayU</option>
-                                                            <option value="Blik">Blik</option>
-                                                            <option value="PayPal">PayPal</option>
-                                                        </select>
-                                                    
-                                                </div>
-                                                <br>
-
-                                                <div class="row gtr-50">
-                        
-                                                    <div class="col-12">
-                                                        <ul class="actions">
-                                                            <li><input type="submit" class="button" value="Zapłać" /></li>
-                                                            
-                                                        </ul>
+                                                    <b>Wybierz formę płatności</b><br>
+                                                    <div class="box">
+                                                        
+                                                            <select name="platnosc" id="id_platnosc" form="pay">
+                                                                <option value="Przelew">Przelew</option>
+                                                                <option value="PayU">PayU</option>
+                                                                <option value="Blik">Blik</option>
+                                                                <option value="PayPal">PayPal</option>
+                                                            </select>
+                                                        
                                                     </div>
+                                                    <br>
 
-                                                </div>
-                                    </form>
+                                                    <div class="row gtr-50">
+                            
+                                                        <div class="col-12">
+                                                            <ul class="actions">
+                                                                <li><input type="submit" class="button" value="Zapłać" /></li>
+                                                                
+                                                            </ul>
+                                                        </div>
 
-                                    <!--
-                                    id_pojazdu:{$vehicle["id_pojazdu"]} 
-                                    <br>
-                                    id_usera: {\core\SessionUtils::load("user_id", true)}
-                                    <br>
-                                    id_placowki: {$placowka}
-                                    <br>
-                                    data_wyp: {$data_wyp}
-                                    <br>
-                                    data_zw: {$data_zw}
-                                    <br>
-                                    wartosc rezerwacji: {$rentValue} <br>
-                                    {date("Y-m-d")}
-                                    -->
-                                    
-                                    
-                                    
-                                    
-                                    
-							</article>
+                                                    </div>
+                                        </form>
+                
+                                </article>
 
-                                
-
-
-						</div>                       
-					</div>
+                            </div>                       
+                        </div>
 </section>
 
 {/block}

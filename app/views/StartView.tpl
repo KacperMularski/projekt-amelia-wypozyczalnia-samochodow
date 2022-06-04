@@ -18,20 +18,24 @@
 
         </ul>
     </li>
+
+    {if \core\RoleUtils::inRole("admin")}
+		<li><b><a href="{$conf->action_url}adminUzytkownicyPage">Panel Administratora</a></b>
+		</li>	
+	{/if}
     
 {/block}
 
 {block name=content}
 
-<!-- Banner -->
+
 <section id="banner">
     <header>
-        <!--<h2>Arcana: <em>A responsive site template freebie by-->
-        <!--<a href="#" class="button">Learn More</a>-->
+        
     </header>
 </section>
 
-<!-- Highlights -->
+
 <section class="wrapper style1">
     <div class="container">
         <div class="row gtr-200">
@@ -68,8 +72,6 @@
     </div>
 </section> 
 
-
-<!-- Posts -->
 <section class="wrapper style1">
     <div class="container">
         <div class="row">

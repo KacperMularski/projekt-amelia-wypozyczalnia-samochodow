@@ -8,6 +8,7 @@ use core\Messages;
 use core\ParamUtils;
 use core\Utils;
 use app\forms\RegisterForm;
+use core\Validator;
 
 class RegisterCtrl {
 
@@ -40,37 +41,77 @@ class RegisterCtrl {
             {
 			return false;
 			}
-		
 
-		if ($this->form->login == "") {
-            App::getMessages()->addMessage(new \core\Message("Nie podano nazwy użytkownika!", \core\Message::ERROR));
-		}
-		if ($this->form->email == "") {
-            App::getMessages()->addMessage(new \core\Message("Nie podano adresu email!", \core\Message::ERROR));    
-		}
-		if ($this->form->pass == "") {
-			App::getMessages()->addMessage(new \core\Message("Nie podano hasła!", \core\Message::ERROR)); 
-		}
-        if ($this->form->pass_repeat == "") {
-			App::getMessages()->addMessage(new \core\Message("Wprowadź hasło ponownie!", \core\Message::ERROR)); 
-		}
-        if ($this->form->imie == "") {
-            App::getMessages()->addMessage(new \core\Message("Nie podano imienia!", \core\Message::ERROR));
-        }
-        if ($this->form->nazwisko == "") {
-                App::getMessages()->addMessage(new \core\Message("Nie podano nazwiska!", \core\Message::ERROR));    
-        }
-        if ($this->form->nr_prawa_jazdy == "") {
-                App::getMessages()->addMessage(new \core\Message("Nie podano numeru prawa jazdy!", \core\Message::ERROR)); 
-        }
-        if ($this->form->nr_tel == "") {
-                App::getMessages()->addMessage(new \core\Message("Nie podano numeru telefonu!", \core\Message::ERROR)); 
-        }
-        if ($this->form->data_ur == "") {
-                App::getMessages()->addMessage(new \core\Message("Nie podano daty urodzenia!", \core\Message::ERROR)); 
-        }
-		
-		
+            $val = new Validator();
+
+            $val->validate($this->form->login,[
+                'trim' => true,
+                'required' => true,
+                'min_length' => 5,
+                'required_message' => 'Nie wybrano loginu',
+                'validator_message' => 'Login jest zbyt krótki (min 5 znaków)'
+            ]);
+
+            $val->validate($this->form->email,[
+                'trim' => true,
+                'required' => true,
+                'email' => true,
+                'required_message' => 'Nie wybrano adresu email',
+                'validator_message' => 'Zły format adresu'
+            ]);
+
+            $val->validate($this->form->imie,[
+                'trim' => true,
+                'required' => true,
+                'required_message' => 'Nie wybrano imienia'
+            ]);
+
+            $val->validate($this->form->nazwisko,[
+                'trim' => true,
+                'required' => true,
+                'required_message' => 'Nie wybrano nazwiska'
+            ]);
+
+            $val->validate($this->form->nr_prawa_jazdy,[
+                'trim' => true,
+                'required' => true,
+                'min_length' => 11, 
+                'max_length' => 11, 
+                'int' => true,
+                'required_message' => 'Nie wybrano numeru prawa jazdy',
+                'validator_message' => 'Zły format numeru prawa jazdy (11 cyfr)'
+
+            ]);
+
+            $val->validate($this->form->nr_tel,[
+                'trim' => true,
+                'required' => true,
+                'min_length' => 11, 
+                'max_length' => 11, 
+                'int' => true,
+                'required_message' => 'Nie wybrano numeru telefonu',
+                'validator_message' => 'Zły format numeru telefonu (11 cyfr, 48...)'
+            ]);
+
+            $val->validate($this->form->data_ur,[
+                'required' => true,
+                'date_format' => 'Y-m-d',
+                'required_message' => 'Nie wybrano daty urodzenia',
+                'validator_message' => 'Zły format numeru daty (Y-m-d)'
+            ]);
+
+            $val->validate($this->form->pass_repeat,[
+                'required' => true,
+                'required_message' => 'Powtórz hasło'
+            ]);
+
+            $val->validate($this->form->pass,[
+                'required' => true,
+                'required_message' => 'Hasło jest wymagane',
+                'regexp' => "/(.{8,})/",
+                'validator_message' => 'Hasło powinno mieć co najmniej 8 znaków'
+            ]);
+
 		if (! App::getMessages()->isError()) {
             if ($this->form->pass != $this->form->pass_repeat)  {
                 App::getMessages()->addMessage(new \core\Message("Hasła muszą być takie same!", \core\Message::ERROR)); 
@@ -98,27 +139,6 @@ class RegisterCtrl {
             App::getMessages()->addMessage(new \core\Message("Błąd bazy danych!", \core\Message::ERROR)); 
 		    }
         }
-        
-        if(! App::getMessages()->isError()) {
-
-            if (strlen($this->form->login) < 5) {
-                App::getMessages()->addMessage(new \core\Message("Login jest zbyt krótki!", \core\Message::ERROR)); 
-            }
-            if (strlen($this->form->pass) < 8) {
-                App::getMessages()->addMessage(new \core\Message("Hasło jest zbyt krótkie!", \core\Message::ERROR)); 
-            }
-
-        }
-
-         if(! App::getMessages()->isError()) {
-
-            if ( ! is_numeric( $this->form->nr_prawa_jazdy ) && ! $this->form->nr_prawa_jazdy < 11) {
-                App::getMessages()->addMessage(new \core\Message("Numer musi być liczbą całkowitą i musi być długości 11!", \core\Message::ERROR)); 
-            }
-            if ( ! is_numeric( $this->form->nr_tel ) && ! $this->form->nr_tel < 11) {
-                App::getMessages()->addMessage(new \core\Message("Numer telefonu musi być liczbą całkowitą!", \core\Message::ERROR)); 
-            }
-        }   
 	
 		return ! App::getMessages()->isError();    
 	}
@@ -126,17 +146,8 @@ class RegisterCtrl {
     public function action_register() {
 
         $this->getParams();
-        $this->validate();
 
-        if( App::getMessages()->isError()) {
-
-            App::getSmarty()->assign('form', $this->form);
-            App::getSmarty()->assign('page_title','RacingCars');      
-            App::getSmarty()->display("RegisterView.tpl");
-    
-        }
-
-        if( ! App::getMessages()->isError()) {
+        if($this->validate()) {
 
             try {
                 //Dane internetowe
@@ -145,7 +156,7 @@ class RegisterCtrl {
                 "nr_pr_jazdy" => $this->form->nr_prawa_jazdy, "nr_tel" => $this->form->nr_tel]);
             
                 $account_id = (int)App::getDB()->id();
-                App::getDB() -> update("konto", ["klient_id_klienta" => $account_id],["id_konta" => $account_id]);
+                App::getDB() -> update("konto", ["osoba_id_osoby" => $account_id],["id_konta" => $account_id]);
                 App::getDB() -> update("osoba", ["konto_id_konta" => $account_id],["id_osoby" => $account_id]);
             
                         
@@ -154,20 +165,18 @@ class RegisterCtrl {
                 }  
 
         
-        App::getSmarty()->assign('page_title','RacingCars');      
-        App::getSmarty()->display("FinalRegisterView.tpl");
-        
-	}
-      
-       
-        
+                App::getSmarty()->assign('page_title','RacingCars');      
+                App::getSmarty()->display("FinalRegisterView.tpl");
+
+        } else {
+
+            App::getSmarty()->assign('form', $this->form);
+            App::getSmarty()->assign('page_title','RacingCars');      
+            App::getSmarty()->display("RegisterView.tpl");
+        }
 
     }
     
-
-    
-
-
 }
 
     

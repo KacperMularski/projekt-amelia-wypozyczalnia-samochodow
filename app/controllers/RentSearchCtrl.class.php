@@ -58,6 +58,14 @@ class RentSearchCtrl {
             'required_message' => 'Nie wybrano miejsca'
         ]);
 
+        if (! App::getMessages()->isError()) {
+
+            if (((strtotime($this->form->data_zw) - strtotime($this->form->data_wyp)) / (60*60*24)) < 0) {
+
+                App::getMessages()->addMessage(new \core\Message("Nieprawidłowy termin rezerwacji", \core\Message::ERROR)); 
+            }
+        }
+
         return ! App::getMessages()->isError();  
     }
 
@@ -164,7 +172,7 @@ class RentSearchCtrl {
                  
 
                 $this->vehicles_count = App::getDB() -> count("samochod", ["czy_wypoz" => "nie", "skrzynia$k_skrzynia_null" => "$k_skrzynia", 
-                "rodz_paliwa$k_paliwo_null" => "$k_paliwo",]);
+                "rodz_paliwa$k_paliwo_null" => "$k_paliwo", "placowka_id_placowki" => intval($this->form->placowka)]);
                 
              
                         

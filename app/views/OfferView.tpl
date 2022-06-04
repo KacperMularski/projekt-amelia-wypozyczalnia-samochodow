@@ -18,6 +18,11 @@
 
         </ul>
     </li>
+
+    {if \core\RoleUtils::inRole("admin")}
+		<li><b><a href="{$conf->action_url}adminUzytkownicyPage">Panel Administratora</a></b>
+		</li>	
+	{/if}
     
 {/block}
 
@@ -26,9 +31,6 @@
    <section class="wrapper style1">
 					<div class="container">
 						<div id="content">
-
-							<!-- Content -->
-
 								<article>
 									<header>
 										<h2>Samochody z naszej oferty</h2>
@@ -61,9 +63,6 @@
                                         {/foreach}
                                     {/if}
                                     
-                                    
-                                   
-
                                 </article>
 
                         </div>

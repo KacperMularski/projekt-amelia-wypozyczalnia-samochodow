@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-05-29 18:10:07
+/* Smarty version 4.1.0, created on 2022-06-04 17:51:01
   from 'C:\xampp\htdocs\amelia\app\views\RentView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_62939adf0ff9c9_43013127',
+  'unifunc' => 'content_629b7f65f0bce4_80350698',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5a88495884436599893f709820300ebed29dc25a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\RentView.tpl',
-      1 => 1653840598,
+      1 => 1654357859,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_62939adf0ff9c9_43013127 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629b7f65f0bce4_80350698 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_92056692062939adf0d1864_93278082', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_344055123629b7f65edb590_57432606', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_21077485662939adf0d2188_15257506', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2063845390629b7f65edbec4_64786012', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_23870517862939adf0d91e7_20964460', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1843362401629b7f65ee44e0_49700764', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_92056692062939adf0d1864_93278082 extends Smarty_Internal_Block
+class Block_344055123629b7f65edb590_57432606 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_92056692062939adf0d1864_93278082',
+    0 => 'Block_344055123629b7f65edb590_57432606',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_21077485662939adf0d2188_15257506 extends Smarty_Internal_Block
+class Block_2063845390629b7f65edbec4_64786012 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_21077485662939adf0d2188_15257506',
+    0 => 'Block_2063845390629b7f65edbec4_64786012',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -87,18 +87,24 @@ register_page">Zarejestruj</a></li>
 
         </ul>
     </li>
+
+    <?php if (\core\RoleUtils::inRole("admin")) {?>
+		<li><b><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+adminUzytkownicyPage">Panel Administratora</a></b>
+		</li>	
+	<?php }?>
     
 <?php
 }
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_23870517862939adf0d91e7_20964460 extends Smarty_Internal_Block
+class Block_1843362401629b7f65ee44e0_49700764 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_23870517862939adf0d91e7_20964460',
+    0 => 'Block_1843362401629b7f65ee44e0_49700764',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -108,8 +114,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 <section class="wrapper style1">
 					<div class="container">
 						<div id="content">
-
-							<!-- Content -->
 
 								<article>
 									<header>
@@ -126,13 +130,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
                                     
 									</header>
                                     </br></br>
-
-                                    
-
-									
-
-									<!--<span class="image featured"><img src="images/banner.jpg" alt="" /></span>-->
-
 									
 								</article>
 
@@ -150,8 +147,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 										<section>
                                             <div class="form-border">
                                                 <h3>Wybierz miejsce rezerwacji</h3>
-
-                                                
 
                                                 <form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 rentSearch" method="post" id="place">
@@ -266,8 +261,6 @@ rentSearch" method="post" id="place">
 										<div class="form-border">
 
                                             <h3>Filtry</h3>
-
-                                            
 
                                                 <b> Cena </b> </br>
                                                         <?php if ((isset($_smarty_tpl->tpl_vars['form']->value->cena)) && $_smarty_tpl->tpl_vars['form']->value->cena == "rosnaco") {?>
@@ -415,8 +408,6 @@ rentSearch" method="post" id="place">
 							<div class="col-8  col-12-narrower imp-narrower">
 								<div id="content">
 
-									<!-- Content -->
-
 										<article>
 											<header>
                                             <?php if (!(isset($_smarty_tpl->tpl_vars['vehicle']->value))) {?>   
@@ -498,8 +489,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
                                         </article>
 
-											
-
+										
 								</div>
 							</div>
 						</div>
