@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-05 11:47:16
-  from 'C:\xampp\htdocs\amelia\app\views\AdminUzytkownicyView.tpl' */
+/* Smarty version 4.1.0, created on 2022-06-05 13:49:36
+  from 'C:\xampp\htdocs\amelia\app\views\SearchUserView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629c7ba4e161d3_07232015',
+  'unifunc' => 'content_629c9850869c05_06189052',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '01fa5507fab168e75d734be9c6831af009ca5ad1' => 
+    '16c6ceeb4626cdeaa72b685c8a3f2089350b2b98' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\AdminUzytkownicyView.tpl',
-      1 => 1654357375,
+      0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\SearchUserView.tpl',
+      1 => 1654429774,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629c7ba4e161d3_07232015 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629c9850869c05_06189052 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_704832474629c7ba4dde4d1_95353028', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1534611204629c9850850fd0_96503779', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1642724166629c7ba4ddee13_72151014', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1930661288629c9850851902_81851007', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_973418747629c7ba4de3479_49868732', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_372450179629c9850855e57_23027694', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main_admin.tpl");
 }
 /* {block 'end'} */
-class Block_704832474629c7ba4dde4d1_95353028 extends Smarty_Internal_Block
+class Block_1534611204629c9850850fd0_96503779 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_704832474629c7ba4dde4d1_95353028',
+    0 => 'Block_1534611204629c9850850fd0_96503779',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_1642724166629c7ba4ddee13_72151014 extends Smarty_Internal_Block
+class Block_1930661288629c9850851902_81851007 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_1642724166629c7ba4ddee13_72151014',
+    0 => 'Block_1930661288629c9850851902_81851007',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -69,11 +69,11 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 
 	<li class="current"><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminUzytkownicyPage">Użytkownicy</a></li>
+SearchUser">Użytkownicy</a></li>
     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminWypozyczeniaPage">Wypożyczenia</a></li>
+SearchRent">Wypożyczenia</a></li>
     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminSamochodyPage">Samochody</a></li>
+SearchCar">Samochody</a></li>
     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 adminPracownicyPage">Pracownicy</a></li>
      
@@ -82,12 +82,12 @@ adminPracownicyPage">Pracownicy</a></li>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_973418747629c7ba4de3479_49868732 extends Smarty_Internal_Block
+class Block_372450179629c9850855e57_23027694 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_973418747629c7ba4de3479_49868732',
+    0 => 'Block_372450179629c9850855e57_23027694',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -100,14 +100,14 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 								<article>
 									<header>
-										<h2>Tabela wypożyczenia</h2>
+										<h2>Tabela użytkownicy</h2>
 										
 									</header>
 
 									<section class="col-6 col-12-narrower">
 										
 										<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminUzytkownicyPage" method="post">
+SearchUser" method="post">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-mobilep">
 													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->surname_search))) {?>
@@ -137,7 +137,7 @@ adminUzytkownicyPage" method="post">
 
                                                     <ul class="actions">
 														<li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-AddUzytkownicy" class="button">+ Dodaj osobę</a></li>
+AddUser" class="button">+ Dodaj osobę</a></li>
 													</ul>
 												</div>
 											</div>
@@ -258,7 +258,7 @@ $_smarty_tpl->tpl_vars['value']->do_else = false;
 </td>
                                                     <td><?php echo $_smarty_tpl->tpl_vars['value']->value['czy_aktywny'];?>
  </td>
-                                                    <td><a href="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['url'][0], array( array('action'=>'EditUzytkownicy','id'=>$_smarty_tpl->tpl_vars['value']->value["id_osoby"]),$_smarty_tpl ) );?>
+                                                    <td><a href="<?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['url'][0], array( array('action'=>'EditUser','id'=>$_smarty_tpl->tpl_vars['value']->value["id_osoby"]),$_smarty_tpl ) );?>
 " class="button">Edytuj</a> </td>
                                                 </tr> 
                                             <?php

@@ -2,20 +2,17 @@
 
 namespace app\forms;
 
-class EditUzytkownicyForm {
+class AddUserForm {
 
-    public $id;
     public $login;
-    public $login_check;
-	public $haslo;
+	public $pass;
+    public $pass_repeat;
     public $email;
-    public $email_check;
     public $imie;
     public $nazwisko;
     public $data_ur;
     public $nr_pr_jazdy;
     public $nr_tel;
     public $rola;
-    public $czy_aktywny;
 
 }

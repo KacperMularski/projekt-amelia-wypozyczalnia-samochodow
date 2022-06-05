@@ -45,21 +45,32 @@ Utils::addRoute('rentPay', 'PaidCtrl', ["user","admin"]);
 
 Utils::addRoute('rentHistory', 'RentHistoryCtrl', ["user","admin"]);
 
-Utils::addRoute('adminUzytkownicyPage', 'AdminUzytSearchCtrl', ["admin"]);
 
-Utils::addRoute('AddUzytkownicy', 'AdminUzytSearchCtrl', ["admin"]);
 
-Utils::addRoute('saveAddUzytkownicy', 'AddUzytkownicyCtrl', ["admin"]);
 
-Utils::addRoute('adminWypozyczeniaPage', 'StartAdminPanelCtrl', ["admin"]);
+//panel administratora (użytkownicy)
+Utils::addRoute('SearchUser', 'SearchUserCtrl', ["admin"]);
 
-Utils::addRoute('adminSamochodyPage', 'StartAdminPanelCtrl', ["admin"]);
+Utils::addRoute('AddUser', 'SearchUserCtrl', ["admin"]);
 
-Utils::addRoute('adminPracownicyPage', 'StartAdminPanelCtrl', ["admin"]);
+Utils::addRoute('saveAddUser', 'AddUserCtrl', ["admin"]);
 
-Utils::addRoute('EditUzytkownicy', 'EditUzytkownicyCtrl', ["admin"]);
+Utils::addRoute('EditUser', 'EditUserCtrl', ["admin"]);
 
-Utils::addRoute('saveEditUzytkownicy', 'EditUzytkownicyCtrl', ["admin"]);
+Utils::addRoute('saveEditUser', 'EditUserCtrl', ["admin"]);
+
+//panel administratora (wypożyczenia)
+Utils::addRoute('SearchRent', 'SearchRentCtrl', ["admin"]);
+
+//panel administratora (samochody)
+Utils::addRoute('SearchCar', 'SearchCarCtrl', ["admin"]);
+Utils::addRoute('EditCar', 'EditCarCtrl', ["admin"]);
+Utils::addRoute('saveEditCar', 'EditCarCtrl', ["admin"]);
+Utils::addRoute('AddCar', 'SearchCarCtrl', ["admin"]);
+Utils::addRoute('saveAddCar', 'AddCarCtrl', ["admin"]);
+
+//panel administratora (pracownicy)
+
 
 
 

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-04 13:27:48
+/* Smarty version 4.1.0, created on 2022-06-05 12:52:45
   from 'C:\xampp\htdocs\amelia\app\views\StartView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629b41b41c6475_60436102',
+  'unifunc' => 'content_629c8afd6bced3_31452621',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b1c0fc2619eb70a096a624bae2f7d1fd08fe1304' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\StartView.tpl',
-      1 => 1654342066,
+      1 => 1654426363,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629b41b41c6475_60436102 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629c8afd6bced3_31452621 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1897129525629b41b41bc836_00669499', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1663983045629c8afd6b33b6_84348007', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_867222743629b41b41bd176_44875807', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_330322759629c8afd6b3d32_74507545', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1842999122629b41b41c5874_93803671', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1595805105629c8afd6bc0a9_69315921', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_1897129525629b41b41bc836_00669499 extends Smarty_Internal_Block
+class Block_1663983045629c8afd6b33b6_84348007 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_1897129525629b41b41bc836_00669499',
+    0 => 'Block_1663983045629c8afd6b33b6_84348007',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_867222743629b41b41bd176_44875807 extends Smarty_Internal_Block
+class Block_330322759629c8afd6b3d32_74507545 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_867222743629b41b41bd176_44875807',
+    0 => 'Block_330322759629c8afd6b3d32_74507545',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -90,7 +90,7 @@ register_page">Zarejestruj</a></li>
 
     <?php if (\core\RoleUtils::inRole("admin")) {?>
 		<li><b><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminUzytkownicyPage">Panel Administratora</a></b>
+SearchUser">Panel Administratora</a></b>
 		</li>	
 	<?php }?>
     
@@ -99,27 +99,26 @@ adminUzytkownicyPage">Panel Administratora</a></b>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_1842999122629b41b41c5874_93803671 extends Smarty_Internal_Block
+class Block_1595805105629c8afd6bc0a9_69315921 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1842999122629b41b41c5874_93803671',
+    0 => 'Block_1595805105629c8afd6bc0a9_69315921',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
-<!-- Banner -->
+
 <section id="banner">
     <header>
-        <!--<h2>Arcana: <em>A responsive site template freebie by-->
-        <!--<a href="#" class="button">Learn More</a>-->
+        
     </header>
 </section>
 
-<!-- Highlights -->
+
 <section class="wrapper style1">
     <div class="container">
         <div class="row gtr-200">
@@ -156,26 +155,24 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
     </div>
 </section> 
 
-
-<!-- Posts -->
 <section class="wrapper style1">
     <div class="container">
         <div class="row">
             <section class="col-6 col-12-narrower">
                 <div class="box post">
-                    <a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
+                    <a href="#" class="image left"><img src="images/toyota-yaris-gr-01.PNG" alt="" /></a>
                     <div class="inner">
-                        <h3>The First Thing</h3>
-                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        <h3>Poszukujesz sprawdzonego pojazdu? Przejrzyj naszą ofertę!</h3>
+                        <p>Nasze samochody pozyskujemy tylko od zaufanych dostawców.</p>
                     </div>
                 </div>
             </section>
             <section class="col-6 col-12-narrower">
                 <div class="box post">
-                    <a href="#" class="image left"><img src="images/pic02.jpg" alt="" /></a>
+                    <a href="#" class="image left"><img src="images/bmw-02.jpg" alt="" /></a>
                     <div class="inner">
-                        <h3>The Second Thing</h3>
-                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        <h3>Auta premium w RacingCars</h3>
+                        <p>Zapoznaj się z szeroką gamą samochodów klasy PREMIUM!</p>
                     </div>
                 </div>
             </section>
@@ -183,19 +180,24 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
         <div class="row">
             <section class="col-6 col-12-narrower">
                 <div class="box post">
-                    <a href="#" class="image left"><img src="images/pic03.jpg" alt="" /></a>
+                    <a href="#" class="image left"><img src="images/wynajem-03.jpg" alt="" /></a>
                     <div class="inner">
-                        <h3>The Third Thing</h3>
-                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        <h3>Wynajem samochodu w RacingCars</h3>
+                        <p>Nasi klienci mają możliwość złożenia zamówienia online, łącznie z opłaceniem rezerwacji.
+                        Oferujemy także rezerwacje drogą telefoniczną lub w jednej z naszych placówek.
+                        </p>
                     </div>
                 </div>
             </section>
             <section class="col-6 col-12-narrower">
                 <div class="box post">
-                    <a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
+                    <a href="#" class="image left"><img src="images/low-price-04.PNG" alt="" /></a>
                     <div class="inner">
-                        <h3>The Fourth Thing</h3>
-                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        <h3>Gwarancja najniższej ceny</h3>
+                        <p>Oferujemy atrakcyjne warunki najmu za najniższą cenę.
+                        Nie dość, że oferujemy niskie ceny, 
+                        to każde auto otrzymasz wraz z ubezpieczeniem AC, OC, NW.
+                        </p>
                     </div>
                 </div>
             </section>

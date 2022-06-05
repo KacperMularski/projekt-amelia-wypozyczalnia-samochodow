@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-02 11:49:37
+/* Smarty version 4.1.0, created on 2022-06-05 15:44:10
   from 'C:\xampp\htdocs\amelia\app\views\RentCarPayView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629887b147d6f5_55285927',
+  'unifunc' => 'content_629cb32a9c78c1_93065032',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8d8b08391d19e8e0d921a2a2bd5656607e97f059' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\RentCarPayView.tpl',
-      1 => 1654100745,
+      1 => 1654426336,
       2 => 'file',
     ),
   ),
@@ -20,36 +20,36 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629887b147d6f5_55285927 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629cb32a9c78c1_93065032 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_310889119629887b1465441_93854171', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1516585481629cb32a9b2978_49365442', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1059349616629887b1465d82_91163323', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_419251734629cb32a9b32b0_37198602', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1224438807629887b146e0d8_34719636', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1069850935629cb32a9bb738_26120502', 'content');
 ?>
 
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_310889119629887b1465441_93854171 extends Smarty_Internal_Block
+class Block_1516585481629cb32a9b2978_49365442 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_310889119629887b1465441_93854171',
+    0 => 'Block_1516585481629cb32a9b2978_49365442',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -59,12 +59,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_1059349616629887b1465d82_91163323 extends Smarty_Internal_Block
+class Block_419251734629cb32a9b32b0_37198602 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_1059349616629887b1465d82_91163323',
+    0 => 'Block_419251734629cb32a9b32b0_37198602',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -93,7 +93,7 @@ register_page">Zarejestruj</a></li>
 
     <?php if (\core\RoleUtils::inRole("admin")) {?>
 		<li><b><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminWypozyczeniaPage">Panel Administratora</a></b>
+SearchUser">Panel Administratora</a></b>
 		</li>	
 	<?php }?>
 
@@ -102,12 +102,12 @@ adminWypozyczeniaPage">Panel Administratora</a></b>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_1224438807629887b146e0d8_34719636 extends Smarty_Internal_Block
+class Block_1069850935629cb32a9bb738_26120502 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1224438807629887b146e0d8_34719636',
+    0 => 'Block_1069850935629cb32a9bb738_26120502',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -117,8 +117,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 <section class="wrapper style1">
 					<div class="container">
 						<div id="content">
-
-							<!-- Content -->
 
 								<article>
 									<header>
@@ -149,17 +147,15 @@ $_smarty_tpl->tpl_vars['msg']->do_else = false;
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 										        </ol>
 										        <?php }?>
-										
-
+							
                                     
-                                    
-                                    <h3 class="rentCarInfo"> Data wypożyczenia: <i>  <?php echo $_smarty_tpl->tpl_vars['data_wyp']->value;?>
+                                        <h3 class="rentCarInfo"> Data wypożyczenia: <i>  <?php echo $_smarty_tpl->tpl_vars['data_wyp']->value;?>
 </i> </h3>
-                                    
-                                    <h3 class="rentCarInfo"> Data zwrotu: <i>  <?php echo $_smarty_tpl->tpl_vars['data_zw']->value;?>
+                                            
+                                        <h3 class="rentCarInfo"> Data zwrotu: <i>  <?php echo $_smarty_tpl->tpl_vars['data_zw']->value;?>
 </i>  </h3>
-                                    
-                    
+                                            
+                            
                                     
                                         <div class="imgBorder">
                                         <img src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_root;?>
@@ -188,76 +184,47 @@ zł </h2>
                                         
                                        
                                     
-                                    <h3> Wartość rezerwacji:</h3> </h2><h3><i><?php echo $_smarty_tpl->tpl_vars['daysValue']->value;?>
+                                        <h3> Wartość rezerwacji:</h3> </h2><h3><i><?php echo $_smarty_tpl->tpl_vars['daysValue']->value;?>
  x <?php echo $_smarty_tpl->tpl_vars['vehicle']->value["cena_doba"];?>
 zł </i> </h3>
-                                    <hr style="height: 2px; background: gray; border: 0px;"> 
-                                    <h3>Do zapłacenia: <i> <?php echo $_smarty_tpl->tpl_vars['rentValue']->value;?>
+                                        <hr style="height: 2px; background: gray; border: 0px;"> 
+                                        <h3>Do zapłacenia: <i> <?php echo $_smarty_tpl->tpl_vars['rentValue']->value;?>
  zł </i></h3>
-                                    <hr style="height: 2px; background: gray; border: 0px;"> 
-                                    
-                                    <form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+                                        <hr style="height: 2px; background: gray; border: 0px;"> 
+                                        
+                                        <form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 rentPay" method="post" id="pay">
 
-                                                
-                                                <b>Wybierz formę płatności</b><br>
-                                                <div class="box">
                                                     
-                                                        <select name="platnosc" id="id_platnosc" form="pay">
-                                                            <option value="Przelew">Przelew</option>
-                                                            <option value="PayU">PayU</option>
-                                                            <option value="Blik">Blik</option>
-                                                            <option value="PayPal">PayPal</option>
-                                                        </select>
-                                                    
-                                                </div>
-                                                <br>
-
-                                                <div class="row gtr-50">
-                        
-                                                    <div class="col-12">
-                                                        <ul class="actions">
-                                                            <li><input type="submit" class="button" value="Zapłać" /></li>
-                                                            
-                                                        </ul>
+                                                    <b>Wybierz formę płatności</b><br>
+                                                    <div class="box">
+                                                        
+                                                            <select name="platnosc" id="id_platnosc" form="pay">
+                                                                <option value="Przelew">Przelew</option>
+                                                                <option value="PayU">PayU</option>
+                                                                <option value="Blik">Blik</option>
+                                                                <option value="PayPal">PayPal</option>
+                                                            </select>
+                                                        
                                                     </div>
+                                                    <br>
 
-                                                </div>
-                                    </form>
+                                                    <div class="row gtr-50">
+                            
+                                                        <div class="col-12">
+                                                            <ul class="actions">
+                                                                <li><input type="submit" class="button" value="Zapłać" /></li>
+                                                                
+                                                            </ul>
+                                                        </div>
 
-                                    <!--
-                                    id_pojazdu:<?php echo $_smarty_tpl->tpl_vars['vehicle']->value["id_pojazdu"];?>
- 
-                                    <br>
-                                    id_usera: <?php echo \core\SessionUtils::load("user_id",true);?>
+                                                    </div>
+                                        </form>
+                
+                                </article>
 
-                                    <br>
-                                    id_placowki: <?php echo $_smarty_tpl->tpl_vars['placowka']->value;?>
-
-                                    <br>
-                                    data_wyp: <?php echo $_smarty_tpl->tpl_vars['data_wyp']->value;?>
-
-                                    <br>
-                                    data_zw: <?php echo $_smarty_tpl->tpl_vars['data_zw']->value;?>
-
-                                    <br>
-                                    wartosc rezerwacji: <?php echo $_smarty_tpl->tpl_vars['rentValue']->value;?>
- <br>
-                                    <?php echo date("Y-m-d");?>
-
-                                    -->
-                                    
-                                    
-                                    
-                                    
-                                    
-							</article>
-
-                                
-
-
-						</div>                       
-					</div>
+                            </div>                       
+                        </div>
 </section>
 
 <?php

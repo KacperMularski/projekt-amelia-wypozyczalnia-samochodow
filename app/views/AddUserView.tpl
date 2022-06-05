@@ -25,7 +25,7 @@
 
 									<section class="col-6 col-12-narrower">
 										
-										<form action="{$conf->action_url}saveAddUzytkownicy" method="post">
+										<form action="{$conf->action_url}saveAddUser" method="post">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-mobilep">
 													{if !isset($form->login)}
@@ -115,7 +115,7 @@
 												<div class="col-12">
 													<ul class="actions">
 														<li><input type="submit" class="button" value="Dodaj" /></li>
-                                                        <li><a href="{$conf->action_url}adminUzytkownicyPage" class="button alt">Powrót</a> </li>
+                                                        <li><a href="{$conf->action_url}SearchUser" class="button alt">Powrót</a> </li>
 													</ul>
 												</div>
 											</div>

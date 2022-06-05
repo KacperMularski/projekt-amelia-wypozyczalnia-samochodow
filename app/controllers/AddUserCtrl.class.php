@@ -9,17 +9,17 @@ use core\ParamUtils;
 use core\Utils;
 use core\RoleUtils;
 use core\SessionUtils;
-use app\forms\AddUzytkownicyForm;
+use app\forms\AddUserForm;
 use core\Validator;
 
 
-class AddUzytkownicyCtrl {
+class AddUserCtrl {
 
     private $form;
 
     public function __construct() {
 
-        $this->form = new AddUzytkownicyForm();
+        $this->form = new AddUserForm();
   
     }
 
@@ -148,7 +148,7 @@ class AddUzytkownicyCtrl {
             return ! App::getMessages()->isError();  
         }
 
-    public function action_saveAddUzytkownicy() {
+    public function action_saveAddUser() {
 
         $this->getParams();
 
@@ -171,7 +171,7 @@ class AddUzytkownicyCtrl {
                 App::getMessages()->addMessage(new \core\Message("Pomyślnie dodano użytkownika!", \core\Message::INFO)); 
 
             
-                App::getRouter()->forwardTo('adminUzytkownicyPage'); 
+                App::getRouter()->forwardTo('SearchUser'); 
         }
         else {
             $this->generateView();
@@ -182,7 +182,7 @@ class AddUzytkownicyCtrl {
 
         App::getSmarty()->assign('form',$this->form); 
         App::getSmarty()->assign('page_title','RacingCars');      
-        App::getSmarty()->display("AddUzytkownicyView.tpl"); 
+        App::getSmarty()->display("AddUserView.tpl"); 
     }
 
 }

@@ -20,7 +20,7 @@
     </li>
 
     {if \core\RoleUtils::inRole("admin")}
-		<li><b><a href="{$conf->action_url}adminUzytkownicyPage">Panel Administratora</a></b>
+		<li><b><a href="{$conf->action_url}SearchUser">Panel Administratora</a></b>
 		</li>	
 	{/if}
     
@@ -77,19 +77,19 @@
         <div class="row">
             <section class="col-6 col-12-narrower">
                 <div class="box post">
-                    <a href="#" class="image left"><img src="images/pic01.jpg" alt="" /></a>
+                    <a href="#" class="image left"><img src="images/toyota-yaris-gr-01.PNG" alt="" /></a>
                     <div class="inner">
-                        <h3>The First Thing</h3>
-                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        <h3>Poszukujesz sprawdzonego pojazdu? Przejrzyj naszą ofertę!</h3>
+                        <p>Nasze samochody pozyskujemy tylko od zaufanych dostawców.</p>
                     </div>
                 </div>
             </section>
             <section class="col-6 col-12-narrower">
                 <div class="box post">
-                    <a href="#" class="image left"><img src="images/pic02.jpg" alt="" /></a>
+                    <a href="#" class="image left"><img src="images/bmw-02.jpg" alt="" /></a>
                     <div class="inner">
-                        <h3>The Second Thing</h3>
-                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        <h3>Auta premium w RacingCars</h3>
+                        <p>Zapoznaj się z szeroką gamą samochodów klasy PREMIUM!</p>
                     </div>
                 </div>
             </section>
@@ -97,19 +97,24 @@
         <div class="row">
             <section class="col-6 col-12-narrower">
                 <div class="box post">
-                    <a href="#" class="image left"><img src="images/pic03.jpg" alt="" /></a>
+                    <a href="#" class="image left"><img src="images/wynajem-03.jpg" alt="" /></a>
                     <div class="inner">
-                        <h3>The Third Thing</h3>
-                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        <h3>Wynajem samochodu w RacingCars</h3>
+                        <p>Nasi klienci mają możliwość złożenia zamówienia online, łącznie z opłaceniem rezerwacji.
+                        Oferujemy także rezerwacje drogą telefoniczną lub w jednej z naszych placówek.
+                        </p>
                     </div>
                 </div>
             </section>
             <section class="col-6 col-12-narrower">
                 <div class="box post">
-                    <a href="#" class="image left"><img src="images/pic04.jpg" alt="" /></a>
+                    <a href="#" class="image left"><img src="images/low-price-04.PNG" alt="" /></a>
                     <div class="inner">
-                        <h3>The Fourth Thing</h3>
-                        <p>Duis neque nisi, dapibus sed mattis et quis, nibh. Sed et dapibus nisl amet mattis, sed a rutrum accumsan sed. Suspendisse eu.</p>
+                        <h3>Gwarancja najniższej ceny</h3>
+                        <p>Oferujemy atrakcyjne warunki najmu za najniższą cenę.
+                        Nie dość, że oferujemy niskie ceny, 
+                        to każde auto otrzymasz wraz z ubezpieczeniem AC, OC, NW.
+                        </p>
                     </div>
                 </div>
             </section>

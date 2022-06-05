@@ -11,7 +11,7 @@
     <li class="current"><a href="#">Rejestracja</a></li>
 	
 	{if \core\RoleUtils::inRole("admin")}
-		<li><b><a href="{$conf->action_url}adminUzytkownicyPage">Panel Administratora</a></b>
+		<li><b><a href="{$conf->action_url}SearchUser">Panel Administratora</a></b>
 		</li>	
 	{/if}
 

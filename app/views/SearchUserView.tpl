@@ -4,9 +4,9 @@
 
 {block name=menu}
 
-	<li class="current"><a href="{$conf->action_url}adminUzytkownicyPage">Użytkownicy</a></li>
-    <li><a href="{$conf->action_url}adminWypozyczeniaPage">Wypożyczenia</a></li>
-    <li><a href="{$conf->action_url}adminSamochodyPage">Samochody</a></li>
+	<li class="current"><a href="{$conf->action_url}SearchUser">Użytkownicy</a></li>
+    <li><a href="{$conf->action_url}SearchRent">Wypożyczenia</a></li>
+    <li><a href="{$conf->action_url}SearchCar">Samochody</a></li>
     <li><a href="{$conf->action_url}adminPracownicyPage">Pracownicy</a></li>
      
 {/block}
@@ -19,13 +19,13 @@
 
 								<article>
 									<header>
-										<h2>Tabela wypożyczenia</h2>
+										<h2>Tabela użytkownicy</h2>
 										
 									</header>
 
 									<section class="col-6 col-12-narrower">
 										
-										<form action="{$conf->action_url}adminUzytkownicyPage" method="post">
+										<form action="{$conf->action_url}SearchUser" method="post">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-mobilep">
 													{if !isset($form->surname_search)}
@@ -52,7 +52,7 @@
 													</ul>
 
                                                     <ul class="actions">
-														<li><a href="{$conf->action_url}AddUzytkownicy" class="button">+ Dodaj osobę</a></li>
+														<li><a href="{$conf->action_url}AddUser" class="button">+ Dodaj osobę</a></li>
 													</ul>
 												</div>
 											</div>
@@ -149,7 +149,7 @@
                                                     <td>{$value['email']}</td>
                                                     <td>{$value['rola']}</td>
                                                     <td>{$value['czy_aktywny']} </td>
-                                                    <td><a href="{url action='EditUzytkownicy' id=$value["id_osoby"]}" class="button">Edytuj</a> </td>
+                                                    <td><a href="{url action='EditUser' id=$value["id_osoby"]}" class="button">Edytuj</a> </td>
                                                 </tr> 
                                             {/foreach} 
                                        </tbody>

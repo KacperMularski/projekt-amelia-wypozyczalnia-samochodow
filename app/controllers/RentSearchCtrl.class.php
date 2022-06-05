@@ -45,12 +45,16 @@ class RentSearchCtrl {
 
         $val->validate($this->form->data_wyp,[
             'required' => true,
-            'required_message' => 'Nie wybrano daty wypozyczenia'
+            'required_message' => 'Nie wybrano daty wypozyczenia',
+            'date_format' => 'Y-m-d',
+            'validator_message' => 'Zły format daty wypożyczenia (Y-m-d)',
         ]);
 
         $val->validate($this->form->data_zw,[
             'required' => true,
-            'required_message' => 'Nie wybrano daty zwrotu'
+            'required_message' => 'Nie wybrano daty zwrotu',
+            'date_format' => 'Y-m-d',
+            'validator_message' => 'Zły format daty zwrotu (Y-m-d)',
         ]);
 
         $val->validate($this->form->placowka,[

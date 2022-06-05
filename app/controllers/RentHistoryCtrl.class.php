@@ -45,7 +45,7 @@ public function result() {
         $this->form->tab_wypozyczenie = App::getDB() -> select("wypozyczenie", 
         ["[>]samochod" => ["samochod_id_pojazdu" => "id_pojazdu"], "[>]platnosc" => ["platnosc_id_platnosci" => "id_platnosci"]],
         ["data_wyp", "data_zw","marka", "model", "wart_wyp"], 
-        ["klient_id_klienta" => $this->form->id_klienta]); 
+        ["osoba_id_osoby" => $this->form->id_klienta]); 
 
            
         } catch (\PDOException $ex) {

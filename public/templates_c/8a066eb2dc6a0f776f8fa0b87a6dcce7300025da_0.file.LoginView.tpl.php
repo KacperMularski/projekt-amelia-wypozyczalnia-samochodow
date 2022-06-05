@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-04 17:13:50
+/* Smarty version 4.1.0, created on 2022-06-05 20:43:56
   from 'C:\xampp\htdocs\amelia\app\views\LoginView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629b76ae5e2f18_04078918',
+  'unifunc' => 'content_629cf96c966793_46779159',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a066eb2dc6a0f776f8fa0b87a6dcce7300025da' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\LoginView.tpl',
-      1 => 1654342022,
+      1 => 1654426296,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629b76ae5e2f18_04078918 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629cf96c966793_46779159 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_971329536629b76ae5d2641_72677638', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_600779698629cf96c9503d9_52835007', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_276737060629b76ae5d2f60_76106686', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1634538818629cf96c9512d6_53612489', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_811265596629b76ae5d9f81_83125274', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2106309154629cf96c95a4a7_32624811', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_971329536629b76ae5d2641_72677638 extends Smarty_Internal_Block
+class Block_600779698629cf96c9503d9_52835007 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_971329536629b76ae5d2641_72677638',
+    0 => 'Block_600779698629cf96c9503d9_52835007',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_276737060629b76ae5d2f60_76106686 extends Smarty_Internal_Block
+class Block_1634538818629cf96c9512d6_53612489 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_276737060629b76ae5d2f60_76106686',
+    0 => 'Block_1634538818629cf96c9512d6_53612489',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -87,7 +87,7 @@ register_page">Zarejestruj</a></li>
 
 	<?php if (\core\RoleUtils::inRole("admin")) {?>
 		<li><b><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminUzytkownicyPage">Panel Administratora</a></b>
+SearchUser">Panel Administratora</a></b>
 		</li>	
 	<?php }?>
 
@@ -96,12 +96,12 @@ adminUzytkownicyPage">Panel Administratora</a></b>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_811265596629b76ae5d9f81_83125274 extends Smarty_Internal_Block
+class Block_2106309154629cf96c95a4a7_32624811 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_811265596629b76ae5d9f81_83125274',
+    0 => 'Block_2106309154629cf96c95a4a7_32624811',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -111,9 +111,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 <section class="wrapper style1">
 					<div class="container">
 						<div id="content">
-
-							<!-- Content -->
-
 								<article>
 									<header>
 										<h2>Logowanie</h2>
@@ -174,9 +171,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 
 									</section>
 
-									<!--<span class="image featured"><img src="images/banner.jpg" alt="" /></span>-->
-
-									
 								</article>
 
 						</div>

@@ -2,7 +2,7 @@
 
 namespace app\forms;
 
-class AdminUzytSearchForm {
+class SearchUserForm {
 
     public $surname_search;
 	public $login_search;

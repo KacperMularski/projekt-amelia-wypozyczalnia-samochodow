@@ -58,7 +58,7 @@ public function result(){
             $last_id_platnosc = (int)App::getDB()->id();
         
             App::getDB() -> insert("wypozyczenie", ["platnosc_id_platnosci" => $last_id_platnosc , "samochod_id_pojazdu" => (int)$this->form->id_pojazdu  ,
-            "klient_id_klienta" => (int)$this->form->id_klienta, "placowka_id_placowki" => (int)$this->form->placowka, "data_wyp" => date($this->form->data_wyp), "data_zw" => date($this->form->data_zw)]);
+            "osoba_id_osoby" => (int)$this->form->id_klienta, "placowka_id_placowki" => (int)$this->form->placowka, "data_wyp" => date($this->form->data_wyp), "data_zw" => date($this->form->data_zw)]);
             $last_id_wypozyczenie = (int)App::getDB()->id();
 
             App::getDB() -> update("platnosc", ["wypozyczenie_id_wypozyczenia" => $last_id_wypozyczenie],["id_platnosci" => $last_id_platnosc]);

@@ -4,10 +4,10 @@
 
 {block name=menu}
 
-	<li class="current"><a href="{$conf->action_url}adminUzytkownicyPage">Użytkownicy</a></li>
-    <li><a href="{$conf->action_url}adminWypozyczeniaPage">Wypożyczenia</a></li>
-    <li><a href="{$conf->action_url}adminSamochodyPage">Samochody</a></li>
-    <li><a href="{$conf->action_url}adminPracownicyPage">Pracownicy</a></li>
+	<li class="current"><a href="{$conf->action_url}SearchUser">Użytkownicy</a></li>
+    <li><a href="{$conf->action_url}SearchRent">Wypożyczenia</a></li>
+    <li><a href="{$conf->action_url}SearchCar">Samochody</a></li>
+    <li><a href="{$conf->action_url}SearchWorker">Pracownicy</a></li>
      
 {/block}
 
@@ -42,7 +42,7 @@
 
                                     <section class="col-6 col-12-narrower">
 										
-										<form action="{url action='saveEditUzytkownicy' id=$form->id}" method="post">
+										<form action="{url action='saveEditUser' id=$form->id}" method="post">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-mobilep">
 													{if !isset($form->login)}
@@ -142,7 +142,7 @@
 												<div class="col-12">
 													<ul class="actions">
 														<li><input type="submit" class="button" value="Zapisz zmiany" /></li>
-                                                        <li><a href="{$conf->action_url}adminUzytkownicyPage" class="button alt">Powrót</a> </li>
+                                                        <li><a href="{$conf->action_url}SearchUser" class="button alt">Powrót</a> </li>
 													</ul>
 												</div>
 											</div>

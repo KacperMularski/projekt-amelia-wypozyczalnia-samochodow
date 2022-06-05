@@ -9,11 +9,11 @@ use core\ParamUtils;
 use core\Utils;
 use core\RoleUtils;
 use core\SessionUtils;
-use app\forms\EditUzytkownicyForm;
+use app\forms\EditUserForm;
 use core\Validator;
 
 
-class EditUzytkownicyCtrl {
+class EditUserCtrl {
 
     private $form;
     private $record;
@@ -21,7 +21,7 @@ class EditUzytkownicyCtrl {
 
     public function __construct() {
 
-        $this->form = new EditUzytkownicyForm();
+        $this->form = new EditUserForm();
 
         
     }
@@ -49,7 +49,8 @@ class EditUzytkownicyCtrl {
         return !App::getMessages()->isError();
     }
 
-    public function action_EditUzytkownicy() {
+    public function action_EditUser() {
+
         if ($this->idValidate()) {
 
             $this->loadParameters();  
@@ -219,7 +220,7 @@ class EditUzytkownicyCtrl {
         $this->form->czy_aktywny = ParamUtils::getFromRequest('czy_aktywny');
     }
 
-    public function action_saveEditUzytkownicy() {
+    public function action_saveEditUser() {
 
         $this->idValidate();
         $this->loadParameters();
@@ -240,7 +241,7 @@ class EditUzytkownicyCtrl {
             App::getMessages()->addMessage(new \core\Message("Edycja przebiegła pomyślnie !", \core\Message::INFO)); 
 
             
-            App::getRouter()->forwardTo('adminUzytkownicyPage');   
+            App::getRouter()->forwardTo('SearchUser');   
         }
 
         else {
@@ -254,7 +255,7 @@ class EditUzytkownicyCtrl {
 
         App::getSmarty()->assign('form',$this->form); 
         App::getSmarty()->assign('page_title','RacingCars');      
-        App::getSmarty()->display("EditUzytkownicyView.tpl");
+        App::getSmarty()->display("EditUserView.tpl");
     }
 
 }

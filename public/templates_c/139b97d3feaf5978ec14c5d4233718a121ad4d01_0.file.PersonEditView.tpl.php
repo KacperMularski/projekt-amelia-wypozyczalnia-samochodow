@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-04 14:10:30
+/* Smarty version 4.1.0, created on 2022-06-05 21:53:10
   from 'C:\xampp\htdocs\amelia\app\views\PersonEditView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629b4bb6ea5fe8_41972856',
+  'unifunc' => 'content_629d09a65883f5_11921432',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '139b97d3feaf5978ec14c5d4233718a121ad4d01' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\PersonEditView.tpl',
-      1 => 1654342043,
+      1 => 1654426321,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629b4bb6ea5fe8_41972856 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629d09a65883f5_11921432 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1447880094629b4bb6e94486_07937375', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_31472143629d09a6574874_54303016', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1672420742629b4bb6e94df8_42617001', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2054846604629d09a6575485_19940181', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1275111751629b4bb6e9b687_83193696', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_683968543629d09a657d651_46622479', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_1447880094629b4bb6e94486_07937375 extends Smarty_Internal_Block
+class Block_31472143629d09a6574874_54303016 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_1447880094629b4bb6e94486_07937375',
+    0 => 'Block_31472143629d09a6574874_54303016',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_1672420742629b4bb6e94df8_42617001 extends Smarty_Internal_Block
+class Block_2054846604629d09a6575485_19940181 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_1672420742629b4bb6e94df8_42617001',
+    0 => 'Block_2054846604629d09a6575485_19940181',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -79,7 +79,7 @@ offer_page">Oferta</a></li>
 
 	<?php if (\core\RoleUtils::inRole("admin")) {?>
 		<li><b><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminUzytkownicyPage">Panel Administratora</a></b>
+SearchUser">Panel Administratora</a></b>
 		</li>	
 	<?php }?>
     
@@ -88,12 +88,12 @@ adminUzytkownicyPage">Panel Administratora</a></b>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_1275111751629b4bb6e9b687_83193696 extends Smarty_Internal_Block
+class Block_683968543629d09a657d651_46622479 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1275111751629b4bb6e9b687_83193696',
+    0 => 'Block_683968543629d09a657d651_46622479',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -103,8 +103,6 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 <section class="wrapper style1">
 					<div class="container">
 						<div id="content">
-
-							<!-- Content -->
 
 								<article>
 									<header>
@@ -169,12 +167,6 @@ rentHistory" class="button">Wypożyczenia</a>
 
                                     </table>
                                     
-
-									
-
-									<!--<span class="image featured"><img src="images/banner.jpg" alt="" /></span>-->
-
-									
 								</article>
 
 						</div>

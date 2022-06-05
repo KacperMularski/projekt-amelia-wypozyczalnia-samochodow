@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-05 11:48:03
-  from 'C:\xampp\htdocs\amelia\app\views\AddUzytkownicyView.tpl' */
+/* Smarty version 4.1.0, created on 2022-06-05 12:59:46
+  from 'C:\xampp\htdocs\amelia\app\views\AddUserView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629c7bd32cae74_59594687',
+  'unifunc' => 'content_629c8ca2a1cdf2_82609908',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '836b87f4afbae1e7926cf3271b95ee7ee241709b' => 
+    'bccfada1fd899d20100feb1d1ce3dc3b34593271' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\AddUzytkownicyView.tpl',
-      1 => 1654357352,
+      0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\AddUserView.tpl',
+      1 => 1654426550,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629c7bd32cae74_59594687 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629c8ca2a1cdf2_82609908 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_171539731629c7bd32ae4b4_69690350', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_843369979629c8ca2a001e1_65089336', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2008331909629c7bd32aee66_00186670', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1303223667629c8ca2a00b32_20487359', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_736452187629c7bd32b3518_37104429', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_480121640629c8ca2a050f4_88466037', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main_admin.tpl");
 }
 /* {block 'end'} */
-class Block_171539731629c7bd32ae4b4_69690350 extends Smarty_Internal_Block
+class Block_843369979629c8ca2a001e1_65089336 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_171539731629c7bd32ae4b4_69690350',
+    0 => 'Block_843369979629c8ca2a001e1_65089336',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_2008331909629c7bd32aee66_00186670 extends Smarty_Internal_Block
+class Block_1303223667629c8ca2a00b32_20487359 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_2008331909629c7bd32aee66_00186670',
+    0 => 'Block_1303223667629c8ca2a00b32_20487359',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -82,12 +82,12 @@ adminPracownicyPage">Pracownicy</a></li>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_736452187629c7bd32b3518_37104429 extends Smarty_Internal_Block
+class Block_480121640629c8ca2a050f4_88466037 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_736452187629c7bd32b3518_37104429',
+    0 => 'Block_480121640629c8ca2a050f4_88466037',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -107,7 +107,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 									<section class="col-6 col-12-narrower">
 										
 										<form action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-saveAddUzytkownicy" method="post">
+saveAddUser" method="post">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-mobilep">
 													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->login))) {?>
@@ -206,7 +206,7 @@ saveAddUzytkownicy" method="post">
 													<ul class="actions">
 														<li><input type="submit" class="button" value="Dodaj" /></li>
                                                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminUzytkownicyPage" class="button alt">Powrót</a> </li>
+SearchUser" class="button alt">Powrót</a> </li>
 													</ul>
 												</div>
 											</div>
