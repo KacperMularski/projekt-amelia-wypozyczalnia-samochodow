@@ -7,7 +7,7 @@
 	<li><a href="{$conf->action_url}SearchUser">Użytkownicy</a></li>
     <li class="current"><a href="{$conf->action_url}SearchRent">Wypożyczenia</a></li>
     <li><a href="{$conf->action_url}SearchCar">Samochody</a></li>
-    <li><a href="{$conf->action_url}adminPracownicyPage">Pracownicy</a></li>
+    <li><a href="{$conf->action_url}SearchWorker">Pracownicy</a></li>
      
 {/block}
 

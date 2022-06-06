@@ -63,7 +63,7 @@
 
 										<section>
                                             <div class="form-border">
-                                                <h3>Wybierz miejsce rezerwacji</h3>
+                                                <h3>Wypełnij dane rezerwacji</h3>
 
                                                 <form action="{$conf->action_url}rentSearch" method="post" id="place">
 

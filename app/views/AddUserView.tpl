@@ -4,10 +4,10 @@
 
 {block name=menu}
 
-    <li class="current"><a href="{$conf->action_url}adminUzytkownicyPage">Użytkownicy</a></li>
-    <li><a href="{$conf->action_url}adminWypozyczeniaPage">Wypożyczenia</a></li>
-    <li><a href="{$conf->action_url}adminSamochodyPage">Samochody</a></li>
-    <li><a href="{$conf->action_url}adminPracownicyPage">Pracownicy</a></li>
+    <li class="current"><a href="{$conf->action_url}SearchUser">Użytkownicy</a></li>
+    <li><a href="{$conf->action_url}SearchRent">Wypożyczenia</a></li>
+    <li><a href="{$conf->action_url}SearchCar">Samochody</a></li>
+    <li><a href="{$conf->action_url}SearchWorker">Pracownicy</a></li>
     
 {/block}
 

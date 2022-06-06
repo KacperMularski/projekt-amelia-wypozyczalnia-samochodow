@@ -45,18 +45,11 @@ Utils::addRoute('rentPay', 'PaidCtrl', ["user","admin"]);
 
 Utils::addRoute('rentHistory', 'RentHistoryCtrl', ["user","admin"]);
 
-
-
-
 //panel administratora (użytkownicy)
 Utils::addRoute('SearchUser', 'SearchUserCtrl', ["admin"]);
-
 Utils::addRoute('AddUser', 'SearchUserCtrl', ["admin"]);
-
 Utils::addRoute('saveAddUser', 'AddUserCtrl', ["admin"]);
-
 Utils::addRoute('EditUser', 'EditUserCtrl', ["admin"]);
-
 Utils::addRoute('saveEditUser', 'EditUserCtrl', ["admin"]);
 
 //panel administratora (wypożyczenia)
@@ -70,7 +63,11 @@ Utils::addRoute('AddCar', 'SearchCarCtrl', ["admin"]);
 Utils::addRoute('saveAddCar', 'AddCarCtrl', ["admin"]);
 
 //panel administratora (pracownicy)
-
+Utils::addRoute('SearchWorker', 'SearchWorkerCtrl', ["admin"]);
+Utils::addRoute('EditWorker', 'EditWorkerCtrl', ["admin"]);
+Utils::addRoute('saveEditWorker', 'EditWorkerCtrl', ["admin"]);
+Utils::addRoute('AddWorker', 'SearchWorkerCtrl', ["admin"]);
+Utils::addRoute('saveAddWorker', 'AddWorkerCtrl', ["admin"]);
 
 
 

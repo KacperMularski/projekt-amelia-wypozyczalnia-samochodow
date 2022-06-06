@@ -7,7 +7,7 @@
 	<li class="current"><a href="{$conf->action_url}SearchUser">Użytkownicy</a></li>
     <li><a href="{$conf->action_url}SearchRent">Wypożyczenia</a></li>
     <li><a href="{$conf->action_url}SearchCar">Samochody</a></li>
-    <li><a href="{$conf->action_url}adminPracownicyPage">Pracownicy</a></li>
+    <li><a href="{$conf->action_url}SearchWorker">Pracownicy</a></li>
      
 {/block}
 
@@ -48,10 +48,7 @@
 											
 												<div class="col-12">
 													<ul class="actions">
-														<li><input type="submit" class="button alt" value="Filtruj" /></li>
-													</ul>
-
-                                                    <ul class="actions">
+														<li><input type="submit" class="button alt" value="Filtruj" />
 														<li><a href="{$conf->action_url}AddUser" class="button">+ Dodaj osobę</a></li>
 													</ul>
 												</div>

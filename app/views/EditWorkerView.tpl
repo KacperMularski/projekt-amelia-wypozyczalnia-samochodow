@@ -4,10 +4,10 @@
 
 {block name=menu}
 
-	<li class="current"><a href="{$conf->action_url}SearchUser">Użytkownicy</a></li>
+	<li><a href="{$conf->action_url}SearchUser">Użytkownicy</a></li>
     <li><a href="{$conf->action_url}SearchRent">Wypożyczenia</a></li>
     <li><a href="{$conf->action_url}SearchCar">Samochody</a></li>
-    <li><a href="{$conf->action_url}SearchWorker">Pracownicy</a></li>
+    <li class="current"><a href="{$conf->action_url}SearchWorker">Pracownicy</a></li>
      
 {/block}
 
@@ -18,7 +18,7 @@
 
 								<article>
 									<header>
-										<h2>Edytuj użytkownika</h2> </br>
+										<h2>Edytuj pracownika</h2> </br>
 										
 									</header>
 
@@ -45,34 +45,14 @@
 										<form action="{url action='saveEditWorker' id=$form->id}" method="post">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-mobilep">
-													{if !isset($form->login)}
-												    	<input id="id_login" type="text" name="login" placeholder="Login"/>
+													{if !isset($form->placowka)}
+												    	<input id="id_placowka" type="text" name="placowka" placeholder="Placowka (ID)"/>
 													{/if}
-													{if isset($form->login)}
-														<input id="id_login" type="text" name="login" placeholder="Login" value="{$form->login}"/>
-													{/if}
-												</div>
-
-												<div class="col-6 col-12-mobilep">
-													{if !isset($form->email)}
-														<input id="id_email" type="email"  name="email" placeholder="Email" />
-													{/if}
-													{if isset($form->email)}
-														<input id="id_email" type="email"  name="email" placeholder="Email" value="{$form->email}" />
+													{if isset($form->placowka)}
+														<input id="id_placowka" type="text" name="placowka" placeholder="Placowka (ID)" value="{$form->placowka}"/>
 													{/if}
 												</div>
 
-                                                <div class="col-6 col-12-mobilep">
-													{if !isset($form->haslo)}
-														<input id="id_haslo" type="password"  name="haslo" placeholder="Haslo" />
-													{/if}
-													{if isset($form->haslo)}
-														<input id="id_haslo" type="password"  name="haslo" placeholder="Haslo" value="{$form->haslo}" />
-													{/if}
-												</div>
-
-                                                
-												
 												<div class="col-6 col-12-mobilep">
 												{if isset($form->imie)}
 													<input id="id_imie" type="text" name="imie" placeholder="Imie" value="{$form->imie}" />
@@ -91,11 +71,41 @@
 												</div>
 											
 												<div class="col-6 col-12-mobilep">
-													{if isset($form->nr_pr_jazdy)}
-														<input id="id_nr_pr_jazdy" type="text"  name="nr_pr_jazdy"  placeholder="Numer prawa jazdy" value="{$form->nr_pr_jazdy}" />
+													{if isset($form->miasto)}
+														<input id="id_miasto" type="text"  name="miasto"  placeholder="Miasto" value="{$form->miasto}" />
 													{/if}
-													{if !isset($form->nr_pr_jazdy)}
-														<input id="id_nr_pr_jazdy" type="text"  name="nr_pr_jazdy"  placeholder="Numer prawa jazdy" />
+													{if !isset($form->miasto)}
+														<input id="id_miasto" type="text"  name="miasto"  placeholder="Miasto" />
+													{/if}
+
+												</div>
+
+                                                <div class="col-6 col-12-mobilep">
+													{if isset($form->ulica)}
+														<input id="id_ulica" type="text"  name="ulica"  placeholder="Ulica" value="{$form->ulica}" />
+													{/if}
+													{if !isset($form->ulica)}
+														<input id="id_ulica" type="text"  name="ulica"  placeholder="Ulica" />
+													{/if}
+
+												</div>
+
+                                                <div class="col-6 col-12-mobilep">
+													{if isset($form->nr_domu_miesz)}
+														<input id="id_nr_domu_miesz" type="text"  name="nr_domu_miesz"  placeholder="Nr domu/mieszkania" value="{$form->nr_domu_miesz}" />
+													{/if}
+													{if !isset($form->nr_domu_miesz)}
+														<input id="id_nr_domu_miesz" type="text"  name="nr_domu_miesz"  placeholder="Nr domu/mieszkania" />
+													{/if}
+
+												</div>
+
+                                                 <div class="col-6 col-12-mobilep">
+													{if isset($form->kod_pocz)}
+														<input id="id_kod_pocz" type="text"  name="kod_pocz"  placeholder="Kod pocztowy" value="{$form->kod_pocz}" />
+													{/if}
+													{if !isset($form->kod_pocz)}
+														<input id="id_kod_pocz" type="text"  name="kod_pocz"  placeholder="Kod pocztowy" />
 													{/if}
 
 												</div>
@@ -110,11 +120,11 @@
 												</div>
 
                                                 <div class="col-6 col-12-mobilep">
-													{if isset($form->rola)}
-														<input id="id_rola" type="text"  name="rola"  placeholder="Rola" value="{$form->rola}" />
+													{if isset($form->nip)}
+														<input id="id_nip" type="text"  name="nip"  placeholder="NIP" value="{$form->nip}" />
 													{/if}
-													{if !isset($form->rola)}
-														<input id="id_rola" type="text"  name="rola"  placeholder="Rola" />
+													{if !isset($form->nip)}
+														<input id="id_nip" type="text"  name="nip"  placeholder="NIP" />
 													{/if}
 												</div>
 
@@ -127,22 +137,10 @@
 													{/if}
 												</div>
 
-                                                <div class="col-6 col-12-mobilep">
-													{if isset($form->data_ur) }
-													Data urodzenia:   <input id="id_data_ur" type="date"  name="data_ur" 
-                                                    value="{$form->data_ur}" max="2022-05-07" min="1920-01-01" />
-													{/if}
-
-													{if !isset($form->data_ur) }
-													Data urodzenia:   <input id="id_data_ur" type="date"  name="data_ur" 
-                                                    value="2022-05-07" max="2022-05-07" min="1920-01-01" />
-													{/if}
-												</div>
-
 												<div class="col-12">
 													<ul class="actions">
 														<li><input type="submit" class="button" value="Zapisz zmiany" /></li>
-                                                        <li><a href="{$conf->action_url}SearchUser" class="button alt">Powrót</a> </li>
+                                                        <li><a href="{$conf->action_url}SearchWorker" class="button alt">Powrót</a> </li>
 													</ul>
 												</div>
 											</div>

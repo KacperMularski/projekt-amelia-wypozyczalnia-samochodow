@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-05 13:49:36
+/* Smarty version 4.1.0, created on 2022-06-06 12:38:29
   from 'C:\xampp\htdocs\amelia\app\views\SearchUserView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629c9850869c05_06189052',
+  'unifunc' => 'content_629dd925e388a8_63359113',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '16c6ceeb4626cdeaa72b685c8a3f2089350b2b98' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\SearchUserView.tpl',
-      1 => 1654429774,
+      1 => 1654511908,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629c9850869c05_06189052 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629dd925e388a8_63359113 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1534611204629c9850850fd0_96503779', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1644285789629dd925e1f523_55915378', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1930661288629c9850851902_81851007', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_487591335629dd925e1fe77_92595660', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_372450179629c9850855e57_23027694', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_95545619629dd925e24523_12182031', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main_admin.tpl");
 }
 /* {block 'end'} */
-class Block_1534611204629c9850850fd0_96503779 extends Smarty_Internal_Block
+class Block_1644285789629dd925e1f523_55915378 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_1534611204629c9850850fd0_96503779',
+    0 => 'Block_1644285789629dd925e1f523_55915378',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_1930661288629c9850851902_81851007 extends Smarty_Internal_Block
+class Block_487591335629dd925e1fe77_92595660 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_1930661288629c9850851902_81851007',
+    0 => 'Block_487591335629dd925e1fe77_92595660',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -75,19 +75,19 @@ SearchRent">Wypożyczenia</a></li>
     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 SearchCar">Samochody</a></li>
     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminPracownicyPage">Pracownicy</a></li>
+SearchWorker">Pracownicy</a></li>
      
 <?php
 }
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_372450179629c9850855e57_23027694 extends Smarty_Internal_Block
+class Block_95545619629dd925e24523_12182031 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_372450179629c9850855e57_23027694',
+    0 => 'Block_95545619629dd925e24523_12182031',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -132,10 +132,7 @@ SearchUser" method="post">
 											
 												<div class="col-12">
 													<ul class="actions">
-														<li><input type="submit" class="button alt" value="Filtruj" /></li>
-													</ul>
-
-                                                    <ul class="actions">
+														<li><input type="submit" class="button alt" value="Filtruj" />
 														<li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 AddUser" class="button">+ Dodaj osobę</a></li>
 													</ul>

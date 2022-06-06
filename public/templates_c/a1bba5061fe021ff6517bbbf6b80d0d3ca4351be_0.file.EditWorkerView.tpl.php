@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-06 13:08:35
-  from 'C:\xampp\htdocs\amelia\app\views\EditUserView.tpl' */
+/* Smarty version 4.1.0, created on 2022-06-06 12:32:42
+  from 'C:\xampp\htdocs\amelia\app\views\EditWorkerView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629de0330f0677_57102771',
+  'unifunc' => 'content_629dd7ca1045f7_77237325',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '9fb595fd1e31721f85c9bd478d78783e17ce29b5' => 
+    'a1bba5061fe021ff6517bbbf6b80d0d3ca4351be' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\EditUserView.tpl',
-      1 => 1654511138,
+      0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\EditWorkerView.tpl',
+      1 => 1654511539,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629de0330f0677_57102771 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629dd7ca1045f7_77237325 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_619206932629de0330ce3b1_92869585', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_976753900629dd7ca0e20e9_92296265', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_689564722629de0330ceda3_42278156', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_972807030629dd7ca0e2a18_94697363', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_422535605629de0330d3473_29572706', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_962322499629dd7ca0e7285_63414288', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main_admin.tpl");
 }
 /* {block 'end'} */
-class Block_619206932629de0330ce3b1_92869585 extends Smarty_Internal_Block
+class Block_976753900629dd7ca0e20e9_92296265 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_619206932629de0330ce3b1_92869585',
+    0 => 'Block_976753900629dd7ca0e20e9_92296265',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,25 +56,25 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_689564722629de0330ceda3_42278156 extends Smarty_Internal_Block
+class Block_972807030629dd7ca0e2a18_94697363 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_689564722629de0330ceda3_42278156',
+    0 => 'Block_972807030629dd7ca0e2a18_94697363',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
 
-	<li class="current"><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+	<li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 SearchUser">Użytkownicy</a></li>
     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 SearchRent">Wypożyczenia</a></li>
     <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 SearchCar">Samochody</a></li>
-    <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+    <li class="current"><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 SearchWorker">Pracownicy</a></li>
      
 <?php
@@ -82,12 +82,12 @@ SearchWorker">Pracownicy</a></li>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_422535605629de0330d3473_29572706 extends Smarty_Internal_Block
+class Block_962322499629dd7ca0e7285_63414288 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_422535605629de0330d3473_29572706',
+    0 => 'Block_962322499629dd7ca0e7285_63414288',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -99,7 +99,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 
 								<article>
 									<header>
-										<h2>Edytuj użytkownika</h2> </br>
+										<h2>Edytuj pracownika</h2> </br>
 										
 									</header>
 
@@ -135,37 +135,15 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 " method="post">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-mobilep">
-													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->login))) {?>
-												    	<input id="id_login" type="text" name="login" placeholder="Login"/>
+													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->placowka))) {?>
+												    	<input id="id_placowka" type="text" name="placowka" placeholder="Placowka (ID)"/>
 													<?php }?>
-													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->login))) {?>
-														<input id="id_login" type="text" name="login" placeholder="Login" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->login;?>
+													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->placowka))) {?>
+														<input id="id_placowka" type="text" name="placowka" placeholder="Placowka (ID)" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->placowka;?>
 "/>
 													<?php }?>
 												</div>
 
-												<div class="col-6 col-12-mobilep">
-													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->email))) {?>
-														<input id="id_email" type="email"  name="email" placeholder="Email" />
-													<?php }?>
-													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->email))) {?>
-														<input id="id_email" type="email"  name="email" placeholder="Email" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->email;?>
-" />
-													<?php }?>
-												</div>
-
-                                                <div class="col-6 col-12-mobilep">
-													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->haslo))) {?>
-														<input id="id_haslo" type="password"  name="haslo" placeholder="Haslo" />
-													<?php }?>
-													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->haslo))) {?>
-														<input id="id_haslo" type="password"  name="haslo" placeholder="Haslo" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->haslo;?>
-" />
-													<?php }?>
-												</div>
-
-                                                
-												
 												<div class="col-6 col-12-mobilep">
 												<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->imie))) {?>
 													<input id="id_imie" type="text" name="imie" placeholder="Imie" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->imie;?>
@@ -186,12 +164,45 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 												</div>
 											
 												<div class="col-6 col-12-mobilep">
-													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->nr_pr_jazdy))) {?>
-														<input id="id_nr_pr_jazdy" type="text"  name="nr_pr_jazdy"  placeholder="Numer prawa jazdy" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->nr_pr_jazdy;?>
+													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->miasto))) {?>
+														<input id="id_miasto" type="text"  name="miasto"  placeholder="Miasto" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->miasto;?>
 " />
 													<?php }?>
-													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->nr_pr_jazdy))) {?>
-														<input id="id_nr_pr_jazdy" type="text"  name="nr_pr_jazdy"  placeholder="Numer prawa jazdy" />
+													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->miasto))) {?>
+														<input id="id_miasto" type="text"  name="miasto"  placeholder="Miasto" />
+													<?php }?>
+
+												</div>
+
+                                                <div class="col-6 col-12-mobilep">
+													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->ulica))) {?>
+														<input id="id_ulica" type="text"  name="ulica"  placeholder="Ulica" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->ulica;?>
+" />
+													<?php }?>
+													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->ulica))) {?>
+														<input id="id_ulica" type="text"  name="ulica"  placeholder="Ulica" />
+													<?php }?>
+
+												</div>
+
+                                                <div class="col-6 col-12-mobilep">
+													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->nr_domu_miesz))) {?>
+														<input id="id_nr_domu_miesz" type="text"  name="nr_domu_miesz"  placeholder="Nr domu/mieszkania" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->nr_domu_miesz;?>
+" />
+													<?php }?>
+													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->nr_domu_miesz))) {?>
+														<input id="id_nr_domu_miesz" type="text"  name="nr_domu_miesz"  placeholder="Nr domu/mieszkania" />
+													<?php }?>
+
+												</div>
+
+                                                 <div class="col-6 col-12-mobilep">
+													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->kod_pocz))) {?>
+														<input id="id_kod_pocz" type="text"  name="kod_pocz"  placeholder="Kod pocztowy" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->kod_pocz;?>
+" />
+													<?php }?>
+													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->kod_pocz))) {?>
+														<input id="id_kod_pocz" type="text"  name="kod_pocz"  placeholder="Kod pocztowy" />
 													<?php }?>
 
 												</div>
@@ -207,12 +218,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 												</div>
 
                                                 <div class="col-6 col-12-mobilep">
-													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->rola))) {?>
-														<input id="id_rola" type="text"  name="rola"  placeholder="Rola" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->rola;?>
+													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->nip))) {?>
+														<input id="id_nip" type="text"  name="nip"  placeholder="NIP" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->nip;?>
 " />
 													<?php }?>
-													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->rola))) {?>
-														<input id="id_rola" type="text"  name="rola"  placeholder="Rola" />
+													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->nip))) {?>
+														<input id="id_nip" type="text"  name="nip"  placeholder="NIP" />
 													<?php }?>
 												</div>
 
@@ -226,24 +237,11 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 													<?php }?>
 												</div>
 
-                                                <div class="col-6 col-12-mobilep">
-													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->data_ur))) {?>
-													Data urodzenia:   <input id="id_data_ur" type="date"  name="data_ur" 
-                                                    value="<?php echo $_smarty_tpl->tpl_vars['form']->value->data_ur;?>
-" max="2022-05-07" min="1920-01-01" />
-													<?php }?>
-
-													<?php if (!(isset($_smarty_tpl->tpl_vars['form']->value->data_ur))) {?>
-													Data urodzenia:   <input id="id_data_ur" type="date"  name="data_ur" 
-                                                    value="2022-05-07" max="2022-05-07" min="1920-01-01" />
-													<?php }?>
-												</div>
-
 												<div class="col-12">
 													<ul class="actions">
 														<li><input type="submit" class="button" value="Zapisz zmiany" /></li>
                                                         <li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-SearchUser" class="button alt">Powrót</a> </li>
+SearchWorker" class="button alt">Powrót</a> </li>
 													</ul>
 												</div>
 											</div>
