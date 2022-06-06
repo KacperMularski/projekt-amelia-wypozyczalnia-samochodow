@@ -247,7 +247,7 @@
 
                                         <tbody>
 
-                                            {foreach $records as $value}
+                                            {foreach $car_records as $value}
                                                 <tr>
                                                     <td>{$value['id_pojazdu']}</td>
                                                     <td>{$value['marka']}</td>
@@ -267,6 +267,24 @@
                                        </tbody>
 
                                     </table>
+
+                                    <b>Strona: {$offset}</b>
+
+                                        {if $previous_page > 0}
+                                    <a href="{$conf->action_url}SearchCar/{$previous_page}"  class="button alt"><i class="fa-solid fa-angle-left"></i></a>
+                                    {/if}
+
+                                    {if ! $previous_page > 0}
+                                    <a href="" class="button alt"><i class="fa-solid fa-angle-left"></i></a>
+                                    {/if}
+
+                                    {if $isNextPage}
+                                    <a href="{$conf->action_url}SearchCar/{$next_page}" class="button alt"><i class="fa-solid fa-angle-right"></i></a>   
+                                    {/if}  
+
+                                    {if !$isNextPage}
+                                    <a href="" class="button alt"><i class="fa-solid fa-angle-right"></i></a>   
+                                    {/if} 
 
 									</section>
 	

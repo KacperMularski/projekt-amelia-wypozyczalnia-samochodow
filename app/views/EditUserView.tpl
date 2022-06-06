@@ -42,7 +42,7 @@
 
                                     <section class="col-6 col-12-narrower">
 										
-										<form action="{url action='saveEditWorker' id=$form->id}" method="post">
+										<form action="{url action='saveEditUser' id=$form->id}" method="post">
 											<div class="row gtr-50">
 												<div class="col-6 col-12-mobilep">
 													{if !isset($form->login)}

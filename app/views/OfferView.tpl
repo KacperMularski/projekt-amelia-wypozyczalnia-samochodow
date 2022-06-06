@@ -34,18 +34,32 @@
 								<article>
 									<header>
 										<h2>Samochody z naszej oferty</h2>
+                                        <b>Strona: {$offset}</b>
 
-                                        {if isset($vehicle)}   
-											<h2>Liczba wyników: {$vehicles_count} </h2>
-                                        {/if}
+                                        {if $previous_page > 0}
+                                    <a href="{$conf->action_url}offer_page/{$previous_page}"  class="button alt"><i class="fa-solid fa-angle-left"></i></a>
+                                    {/if}
 
+                                    {if ! $previous_page > 0}
+                                    <a href="" class="button alt"><i class="fa-solid fa-angle-left"></i></a>
+                                    {/if}
+
+                                    {if $isNextPage}
+                                    <a href="{$conf->action_url}offer_page/{$next_page}" class="button alt"><i class="fa-solid fa-angle-right"></i></a>   
+                                    {/if}  
+
+                                    {if !$isNextPage}
+                                    <a href="" class="button alt"><i class="fa-solid fa-angle-right"></i></a>   
+                                    {/if} 
+                                    
 									</header>
 
+                                    <br>
                                     {if isset($vehicle)}    
                                         {foreach $vehicle as $value}
 
                                         <a href =""><div class="imgBorder">
-                                        <img src="car_image/{$value["img"]}" alt="" />
+                                        <img src="{$conf->app_root}/car_image/{$value["img"]}" alt="błąd" />
                                         
                                         <ul>
                                         <h1>{$value["marka"]} {$value["model"]}</h1>

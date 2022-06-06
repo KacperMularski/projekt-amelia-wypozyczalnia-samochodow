@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-05 13:44:44
+/* Smarty version 4.1.0, created on 2022-06-06 17:29:11
   from 'C:\xampp\htdocs\amelia\app\views\OfferView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629c972cc7f457_61655475',
+  'unifunc' => 'content_629e1d47f057e7_38895086',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2da90d652a6428ebb73722c21129e84e046d804a' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\OfferView.tpl',
-      1 => 1654426302,
+      1 => 1654529350,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629c972cc7f457_61655475 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629e1d47f057e7_38895086 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_193212729629c972cc6c8c0_56423373', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_81199877629e1d47ef0617_04835368', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1770200790629c972cc6d222_58454001', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1929414772629e1d47ef0f63_48261947', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_480878004629c972cc755f9_97005235', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1571171526629e1d47ef93f6_97610112', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_193212729629c972cc6c8c0_56423373 extends Smarty_Internal_Block
+class Block_81199877629e1d47ef0617_04835368 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_193212729629c972cc6c8c0_56423373',
+    0 => 'Block_81199877629e1d47ef0617_04835368',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_1770200790629c972cc6d222_58454001 extends Smarty_Internal_Block
+class Block_1929414772629e1d47ef0f63_48261947 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_1770200790629c972cc6d222_58454001',
+    0 => 'Block_1929414772629e1d47ef0f63_48261947',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -99,12 +99,12 @@ SearchUser">Panel Administratora</a></b>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_480878004629c972cc755f9_97005235 extends Smarty_Internal_Block
+class Block_1571171526629e1d47ef93f6_97610112 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_480878004629c972cc755f9_97005235',
+    0 => 'Block_1571171526629e1d47ef93f6_97610112',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -117,14 +117,32 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 								<article>
 									<header>
 										<h2>Samochody z naszej oferty</h2>
+                                        <b>Strona: <?php echo $_smarty_tpl->tpl_vars['offset']->value;?>
+</b>
 
-                                        <?php if ((isset($_smarty_tpl->tpl_vars['vehicle']->value))) {?>   
-											<h2>Liczba wyników: <?php echo $_smarty_tpl->tpl_vars['vehicles_count']->value;?>
- </h2>
-                                        <?php }?>
+                                        <?php if ($_smarty_tpl->tpl_vars['previous_page']->value > 0) {?>
+                                    <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+offer_page/<?php echo $_smarty_tpl->tpl_vars['previous_page']->value;?>
+"  class="button alt"><i class="fa-solid fa-angle-left"></i></a>
+                                    <?php }?>
 
+                                    <?php if (!$_smarty_tpl->tpl_vars['previous_page']->value > 0) {?>
+                                    <a href="" class="button alt"><i class="fa-solid fa-angle-left"></i></a>
+                                    <?php }?>
+
+                                    <?php if ($_smarty_tpl->tpl_vars['isNextPage']->value) {?>
+                                    <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+offer_page/<?php echo $_smarty_tpl->tpl_vars['next_page']->value;?>
+" class="button alt"><i class="fa-solid fa-angle-right"></i></a>   
+                                    <?php }?>  
+
+                                    <?php if (!$_smarty_tpl->tpl_vars['isNextPage']->value) {?>
+                                    <a href="" class="button alt"><i class="fa-solid fa-angle-right"></i></a>   
+                                    <?php }?> 
+                                    
 									</header>
 
+                                    <br>
                                     <?php if ((isset($_smarty_tpl->tpl_vars['vehicle']->value))) {?>    
                                         <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['vehicle']->value, 'value');
@@ -134,8 +152,9 @@ $_smarty_tpl->tpl_vars['value']->do_else = false;
 ?>
 
                                         <a href =""><div class="imgBorder">
-                                        <img src="car_image/<?php echo $_smarty_tpl->tpl_vars['value']->value["img"];?>
-" alt="" />
+                                        <img src="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_root;?>
+/car_image/<?php echo $_smarty_tpl->tpl_vars['value']->value["img"];?>
+" alt="błąd" />
                                         
                                         <ul>
                                         <h1><?php echo $_smarty_tpl->tpl_vars['value']->value["marka"];?>

@@ -28,7 +28,7 @@ class EditUserCtrl {
 
     public function idValidate() {
 
-        $this->form->id = ParamUtils::getFromCleanURL(1, true, 'Błędne wywołanie aplikacji');
+        $this->form->id = ParamUtils::getFromCleanURL(1, true , 'Błędne wywołanie aplikacji');
 
         try {
             $id_verify = App::getDB() -> has("konto", ["id_konta" => $this->form->id]);
@@ -239,9 +239,9 @@ class EditUserCtrl {
                     
             
             App::getMessages()->addMessage(new \core\Message("Edycja przebiegła pomyślnie !", \core\Message::INFO)); 
-
             
-            App::getRouter()->forwardTo('SearchUser');   
+            App::getRouter()->forwardTo('SearchUser'); 
+    
         }
 
         else {

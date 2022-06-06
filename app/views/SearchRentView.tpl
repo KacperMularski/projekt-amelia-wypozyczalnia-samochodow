@@ -42,7 +42,7 @@
 												    	<input id="id_mark_search" type="text" name="mark_search" placeholder="Marka"/>
 													{/if}
 													{if isset($form->mark_search)}
-														<input id="id_mark_search" type="text" name="mark_search" placeholder="Model" value="{$form->mark_search}"/>
+														<input id="id_mark_search" type="text" name="mark_search" placeholder="Marka" value="{$form->mark_search}"/>
 													{/if}
 												</div>
 
@@ -169,7 +169,7 @@
 
                                         <tbody>
 
-                                            {foreach $records as $value}
+                                            {foreach $rent_records as $value}
                                                 <tr>
                                                     <td>{$value['id_wypozyczenia']}</td>
                                                     <td>{$value['marka']}</td>
@@ -185,6 +185,25 @@
                                        </tbody>
 
                                     </table>
+
+									<b>Strona: {$offset}</b>
+
+                                        {if $previous_page > 0}
+                                    <a href="{$conf->action_url}SearchRent/{$previous_page}"  class="button alt"><i class="fa-solid fa-angle-left"></i></a>
+                                    {/if}
+
+                                    {if ! $previous_page > 0}
+                                    <a href="" class="button alt"><i class="fa-solid fa-angle-left"></i></a>
+                                    {/if}
+
+                                    {if $isNextPage}
+                                    <a href="{$conf->action_url}SearchRent/{$next_page}" class="button alt"><i class="fa-solid fa-angle-right"></i></a>   
+                                    {/if}  
+
+                                    {if !$isNextPage}
+                                    <a href="" class="button alt"><i class="fa-solid fa-angle-right"></i></a>   
+                                    {/if} 
+					
 
 									</section>
 	

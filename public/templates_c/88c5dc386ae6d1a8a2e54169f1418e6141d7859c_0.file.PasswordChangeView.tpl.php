@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-02 11:50:30
+/* Smarty version 4.1.0, created on 2022-06-06 20:12:51
   from 'C:\xampp\htdocs\amelia\app\views\PasswordChangeView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629887e6c70823_54722324',
+  'unifunc' => 'content_629e43a3ce2e74_24027708',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '88c5dc386ae6d1a8a2e54169f1418e6141d7859c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\PasswordChangeView.tpl',
-      1 => 1654100730,
+      1 => 1654426312,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629887e6c70823_54722324 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629e43a3ce2e74_24027708 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_677990908629887e6c61bf6_05849475', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_54773019629e43a3cd45f6_93819031', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_361404677629887e6c62ad5_54782831', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1675552014629e43a3cd4fb7_32962910', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_525518301629887e6c69285_89213042', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_25586070629e43a3cdb8d9_57687161', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'end'} */
-class Block_677990908629887e6c61bf6_05849475 extends Smarty_Internal_Block
+class Block_54773019629e43a3cd45f6_93819031 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_677990908629887e6c61bf6_05849475',
+    0 => 'Block_54773019629e43a3cd45f6_93819031',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_361404677629887e6c62ad5_54782831 extends Smarty_Internal_Block
+class Block_1675552014629e43a3cd4fb7_32962910 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_361404677629887e6c62ad5_54782831',
+    0 => 'Block_1675552014629e43a3cd4fb7_32962910',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -79,7 +79,7 @@ offer_page">Oferta</a></li>
 
 	<?php if (\core\RoleUtils::inRole("admin")) {?>
 		<li><b><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
-adminWypozyczeniaPage">Panel Administratora</a></b>
+SearchUser">Panel Administratora</a></b>
 		</li>	
 	<?php }?>
 
@@ -88,12 +88,12 @@ adminWypozyczeniaPage">Panel Administratora</a></b>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_525518301629887e6c69285_89213042 extends Smarty_Internal_Block
+class Block_25586070629e43a3cdb8d9_57687161 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_525518301629887e6c69285_89213042',
+    0 => 'Block_25586070629e43a3cdb8d9_57687161',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -104,15 +104,11 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 					<div class="container">
 						<div id="content">
 
-							<!-- Content -->
-
 								<article>
 									<header>
 										<h2>Edytuj hasło</h2> </br>
 										
 									</header>
-
-                                    
 
                                     <section class="col-6 col-12-narrower">
 										
@@ -170,12 +166,6 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 										</ol>
 										<?php }?>
                                     
-
-									
-
-									<!--<span class="image featured"><img src="images/banner.jpg" alt="" /></span>-->
-
-									
 								</article>
 
 						</div>

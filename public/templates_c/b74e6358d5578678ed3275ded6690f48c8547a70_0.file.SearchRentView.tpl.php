@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.1.0, created on 2022-06-06 12:35:34
+/* Smarty version 4.1.0, created on 2022-06-06 19:52:10
   from 'C:\xampp\htdocs\amelia\app\views\SearchRentView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.1.0',
-  'unifunc' => 'content_629dd876c37f99_86016049',
+  'unifunc' => 'content_629e3eca648e37_18242042',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b74e6358d5578678ed3275ded6690f48c8547a70' => 
     array (
       0 => 'C:\\xampp\\htdocs\\amelia\\app\\views\\SearchRentView.tpl',
-      1 => 1654505985,
+      1 => 1654537927,
       2 => 'file',
     ),
   ),
@@ -20,33 +20,33 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_629dd876c37f99_86016049 (Smarty_Internal_Template $_smarty_tpl) {
+function content_629e3eca648e37_18242042 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_218310923629dd876c1cba3_64255897', 'end');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_916991399629e3eca62a592_28721508', 'end');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1069721763629dd876c1d5f4_37314326', 'menu');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1529847668629e3eca62af65_14415600', 'menu');
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1485461700629dd876c21cc4_58416825', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_613380828629e3eca62f974_85476383', 'content');
 $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main_admin.tpl");
 }
 /* {block 'end'} */
-class Block_218310923629dd876c1cba3_64255897 extends Smarty_Internal_Block
+class Block_916991399629e3eca62a592_28721508 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'end' => 
   array (
-    0 => 'Block_218310923629dd876c1cba3_64255897',
+    0 => 'Block_916991399629e3eca62a592_28721508',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -56,12 +56,12 @@ Wszelkie prawa zastrzeżone!<?php
 }
 /* {/block 'end'} */
 /* {block 'menu'} */
-class Block_1069721763629dd876c1d5f4_37314326 extends Smarty_Internal_Block
+class Block_1529847668629e3eca62af65_14415600 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'menu' => 
   array (
-    0 => 'Block_1069721763629dd876c1d5f4_37314326',
+    0 => 'Block_1529847668629e3eca62af65_14415600',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -82,12 +82,12 @@ SearchWorker">Pracownicy</a></li>
 }
 /* {/block 'menu'} */
 /* {block 'content'} */
-class Block_1485461700629dd876c21cc4_58416825 extends Smarty_Internal_Block
+class Block_613380828629e3eca62f974_85476383 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1485461700629dd876c21cc4_58416825',
+    0 => 'Block_613380828629e3eca62f974_85476383',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -125,7 +125,7 @@ SearchRent" method="post">
 												    	<input id="id_mark_search" type="text" name="mark_search" placeholder="Marka"/>
 													<?php }?>
 													<?php if ((isset($_smarty_tpl->tpl_vars['form']->value->mark_search))) {?>
-														<input id="id_mark_search" type="text" name="mark_search" placeholder="Model" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->mark_search;?>
+														<input id="id_mark_search" type="text" name="mark_search" placeholder="Marka" value="<?php echo $_smarty_tpl->tpl_vars['form']->value->mark_search;?>
 "/>
 													<?php }?>
 												</div>
@@ -264,7 +264,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                         <tbody>
 
                                             <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['records']->value, 'value');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['rent_records']->value, 'value');
 $_smarty_tpl->tpl_vars['value']->do_else = true;
 if ($_from !== null) foreach ($_from as $_smarty_tpl->tpl_vars['value']->value) {
 $_smarty_tpl->tpl_vars['value']->do_else = false;
@@ -295,6 +295,30 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                                        </tbody>
 
                                     </table>
+
+									<b>Strona: <?php echo $_smarty_tpl->tpl_vars['offset']->value;?>
+</b>
+
+                                        <?php if ($_smarty_tpl->tpl_vars['previous_page']->value > 0) {?>
+                                    <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+SearchRent/<?php echo $_smarty_tpl->tpl_vars['previous_page']->value;?>
+"  class="button alt"><i class="fa-solid fa-angle-left"></i></a>
+                                    <?php }?>
+
+                                    <?php if (!$_smarty_tpl->tpl_vars['previous_page']->value > 0) {?>
+                                    <a href="" class="button alt"><i class="fa-solid fa-angle-left"></i></a>
+                                    <?php }?>
+
+                                    <?php if ($_smarty_tpl->tpl_vars['isNextPage']->value) {?>
+                                    <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
+SearchRent/<?php echo $_smarty_tpl->tpl_vars['next_page']->value;?>
+" class="button alt"><i class="fa-solid fa-angle-right"></i></a>   
+                                    <?php }?>  
+
+                                    <?php if (!$_smarty_tpl->tpl_vars['isNextPage']->value) {?>
+                                    <a href="" class="button alt"><i class="fa-solid fa-angle-right"></i></a>   
+                                    <?php }?> 
+					
 
 									</section>
 	
