@@ -142,7 +142,7 @@ class SearchCarCtrl {
     public function isNextPage() {
 
         try{
-            $isNext = App::getDB()->has("wypozyczenie",[
+            $isNext = App::getDB()->has("samochod",[
                 'LIMIT' => [(($this->offset) * $this->records), $this->records]
             ]);
    
